@@ -245,7 +245,7 @@ $\ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{
 
 _Cosinus Similarity_ mengukur kesamaan antara dua vektor berdasarkan _cosinus_ dari sudut antara vektor-vektor tersebut. Semakin besar nilai _Cosinus Similarity_, semakin mirip kedua vektor tersebut. Dalam konteks _Content-Based Filtering_, vektor ini mewakili representasi fitur dari item yang dibandingkan.
 
-#### Berikut Evaluasi Menggunakan Pendekatan _Content-Based Filtering_
+#### Evaluasi Menggunakan Pendekatan _Content-Based Filtering_
 ```sh
 data[data.judul.eq("Bill & Ted's Bogus Journey")]
 ```
