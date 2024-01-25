@@ -57,7 +57,7 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 - Eksplorasi variabel menggunakan fungsi `ratings.info()` pada variabel _ratings_.
 - Menampilkan fitur _movies_ menggunakan fungsi `movies.head()`.
 
-**Tabel 1**. Informasi data pada fitur _movies_
+**Tabel 1**. Informasi pada fitur _movies_
 | movieId | title                                  | genres                                          |
 |---------|----------------------------------------|-------------------------------------------------|
 | 1       | Toy Story (1995)                       | Adventure|Animation|Children|Comedy|Fantasy     |
@@ -68,7 +68,7 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 
 - Menampilkan fitur _ratings_ menggunakan fungsi `ratings.head()`.
 
-**Tabel 2**. Informasi data pada fitur _movies_
+**Tabel 2**. Informasi pada fitur _movies_
 | userId | movieId | rating | timestamp  |
 |--------|---------|--------|------------|
 | 1      | 1       | 4.0    | 964982703  |
@@ -101,8 +101,6 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 - **50%** adalah kuartil kedua, atau biasa juga disebut median (nilai tengah).
 - **75%** adalah kuartil ketiga.
 - **Max** adalah nilai maksimum.
-
-
 
 ## Data Preparation
 
