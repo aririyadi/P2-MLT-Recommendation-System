@@ -270,13 +270,13 @@ Output:
 | Ant-Man and the Wasp         | Action|Adventure|Comedy|Fantasy|Scifi  |
 
 - Film "Bill & Ted's Bogus Journey" memiliki genre Adventure, Comedy, Fantasy, dan Scifi.
-- Model Content-Based Filtering memberikan 5 rekomendasi film dengan genre yang mirip, termasuk Adventure, Comedy, Fantasy, dan Scifi.
+- Model _Content-Based Filtering_ memberikan 5 rekomendasi film dengan genre yang mirip, termasuk Adventure, Comedy, Fantasy, dan Scifi.
 - Dari 5 rekomendasi, semuanya memiliki genre yang sesuai dengan film yang dicari, menunjukkan konsistensi model dalam memberikan rekomendasi berdasarkan preferensi pengguna.
 
-Jadi, Cosinus Similarity membantu dalam mengukur kesamaan fitur antara film yang dicari dan film-film rekomendasi, sementara Precision memberikan gambaran tentang seberapa baik model dapat memberikan rekomendasi yang sesuai dengan preferensi pengguna berdasarkan informasi fitur tersebut. Keduanya bekerja bersama untuk memberikan pemahaman yang komprehensif tentang kualitas rekomendasi yang diberikan oleh model Content-Based Filtering.
+Jadi, _Cosinus Similarity_ membantu dalam mengukur kesamaan fitur antara film yang dicari dan film-film rekomendasi, sementara _Precision_ memberikan gambaran tentang seberapa baik model dapat memberikan rekomendasi yang sesuai dengan preferensi pengguna berdasarkan informasi fitur tersebut. Keduanya bekerja bersama untuk memberikan pemahaman yang komprehensif tentang kualitas rekomendasi yang diberikan oleh model _Content-Based Filtering_.
 
 ### _Collaborative Filtering_
-Pada pendekatan _Collaborative Filtering_, metrik evaluasi yang digunakan adalah _Root Mean Squared Error (RMSE)_. RMSE digunakan sebagai indikator seberapa baik model _Collaborative Filtering_ mampu memprediksi preferensi pengguna terhadap item dalam sistem rekomendasi. _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model.
+Pada pendekatan _Collaborative Filtering_, metrik evaluasi yang digunakan adalah _Root Mean Squared Error (RMSE)_. _RMSE_ digunakan sebagai indikator seberapa baik model _Collaborative Filtering_ mampu memprediksi preferensi pengguna terhadap item dalam sistem rekomendasi. _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model.
 
 #### Formula _RMSE_:
 
@@ -289,5 +289,15 @@ Di mana:
 - $\( y_i \)$ adalah nilai sebenarnya dari preferensi pengguna terhadap item.
 - $\( \hat{y}_i \)$ adalah nilai prediksi model untuk preferensi pengguna terhadap item.
 
-RMSE mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model. Semakin kecil nilai RMSE, semakin baik model dapat memprediksi preferensi pengguna terhadap item.
+_RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model. Semakin kecil nilai _RMSE_, semakin baik model dapat memprediksi preferensi pengguna terhadap item.
 
+Berdasarkan hasil evaluasi, model _Collaborative Filtering_ menunjukkan kinerja yang baik dengan kemampuan untuk memprediksi preferensi pengguna secara akurat. Meskipun terdapat sedikit perbedaan antara hasil pada data latih dan data validasi, namun nilai _RMSE_ yang relatif kecil pada keduanya menandakan bahwa model tersebut dapat umumnya digeneralisasikan dengan baik pada data yang tidak terlihat selama pelatihan. Nilai _Root Mean Squared Error (RMSE)_ yang dicapai pada data latih sebesar 0.0710 dan pada data validasi sebesar 0.2618 menunjukkan bahwa model memiliki tingkat akurasi yang tinggi dalam memprediksi preferensi pengguna terhadap item. Semakin kecil nilai _RMSE_, semakin baik kemampuan model dalam membuat prediksi yang mendekati nilai sebenarnya. Dengan nilai _RMSE_ yang relatif kecil, model _Collaborative Filtering_ dapat dianggap berhasil dalam tugas rekomendasi item berdasarkan preferensi pengguna.
+
+## Conclusion
+Proses pengembangan sistem rekomendasi film menggunakan teknik machine learning dengan fokus pada _Content-Based Filtering_ dan _Collaborative Filtering_. Proyek ini mengintegrasikan algoritma _Content-Based Filtering_ yang menganalisis preferensi pengguna berdasarkan sejarah penontonan, penilaian, atau ulasan sebelumnya, serta _Collaborative Filtering_ yang memanfaatkan pola perilaku pengguna sejenis. Data yang digunakan berasal dari dataset Kaggle yang terdiri dari informasi film dan penilaian pengguna. _Content-Based Filtering_ menggunakan _TF-IDF Vectorizer_ dan _Cosine Similarity_ untuk memberikan rekomendasi berdasarkan kesamaan fitur genre. Sementara itu, _Collaborative Filtering_ menerapkan _embedding_ dengan model _RecommenderNet_ dan mengukur performanya menggunakan _Root Mean Squared Error (RMSE)_. Evaluasi kedua pendekatan menunjukkan bahwa keduanya memberikan rekomendasi yang sesuai dengan preferensi pengguna dengan akurasi yang tinggi, namun dengan kelebihan dan kekurangan masing-masing. _Content-Based Filtering_ menyediakan rekomendasi yang lebih personal dan dapat menangani _cold start_, tetapi terbatas pada jenis item yang sudah diketahui pengguna. Sementara _Collaborative Filtering_ memberikan rekomendasi yang beragam dan dapat menangani item baru, tetapi rentan terhadap _sparsitas_ data dan kesulitan dalam menangani perubahan drastis dalam preferensi pengguna. Keseluruhan, proyek ini memberikan pemahaman mendalam tentang implementasi kedua pendekatan dalam konteks sistem rekomendasi film.
+
+## Reference
+[1]. Ricci, F., Rokach, L., & Shapira, B. (2015). *Introduction to Recommender Systems Handbook*. Springer.
+[2]. Adomavicius, G., & Tuzhilin, A. (2005). *Toward the Next Generation of Recommender Systems: A Survey of the State-of-the-Art and Possible Extensions*. IEEE Transactions on Knowledge and Data Engineering, 17(6), 734-749.
+[3]. Desrosiers, C., & Karypis, G. (2011). *A Comprehensive Survey of Neighborhood-Based Recommendation Methods*. In *Recommender Systems Handbook* (pp. 107-144). Springer.
+[4]. Koren, Y., Bell, R., & Volinsky, C. (2009). *Matrix Factorization Techniques for Recommender Systems*. Computer, 42(8), 30-37.
