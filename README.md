@@ -254,7 +254,7 @@ Output:
 **Tabel 4**. Hasil Pencarian Film "Bill & Ted's Bogus Journey"
 | id   | judul                        | genre                           |
 |------|------------------------------|---------------------------------|
-| 4980 | Bill & Ted's Bogus Journey   | Adventure|Comedy|Fantasy|Scifi  |
+| 4980 | Bill & Ted's Bogus Journey   | Adventure-Comedy-Fantasy-Scifi  |
 ```sh
 movie_recommendations("Bill & Ted's Bogus Journey")
 ```
@@ -263,11 +263,11 @@ Output:
 **Tabel 5**. Hasil Rekomendasi Film Berdasarkan "Bill & Ted's Bogus Journey"
 | judul                        | genre                                  |
 |------------------------------|----------------------------------------|
-| Time Bandits                 | Adventure|Comedy|Fantasy|Scifi         |
-| Mothra	                     | Adventure|Fantasy|Scifi                |
-| Biggles                      | Adventure|Fantasy|Scifi                |
-| Tin Man	                     | Adventure|Fantasy|Scifi                |
-| Ant-Man and the Wasp         | Action|Adventure|Comedy|Fantasy|Scifi  |
+| Time Bandits                 | Adventure-Comedy-Fantasy-Scifi         |
+| Mothra	                     | Adventure-Fantasy-Scifi                |
+| Biggles                      | Adventure-Fantasy-Scifi                |
+| Tin Man	                     | Adventure-Fantasy-Scifi                |
+| Ant-Man and the Wasp         | Action-Adventure-Comedy-Fantasy-Scifi  |
 
 - Film "Bill & Ted's Bogus Journey" memiliki genre Adventure, Comedy, Fantasy, dan Scifi.
 - Model _Content-Based Filtering_ memberikan 5 rekomendasi film dengan genre yang mirip, termasuk Adventure, Comedy, Fantasy, dan Scifi.
