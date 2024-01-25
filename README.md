@@ -141,6 +141,8 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 Pada proyek ini, implementasi 2 pendekatan dengan menggunakan teknik _content-based filtering_ dan _collaborative filtering_.
 
 ### _Content-Based Filtering_
+_Content based filtering_ pada Sistem rekomendasi adalah metode yang mempertimbangkan perilaku dari pengguna dari masa lalu yang kemudian diidentifikasi pola perilakunya untuk merekomendasikan barang atau sesuatu yang sesuai dengan pola perilaku tersebut. Metode _content based filtering_ menganalisis preferensi dari perilaku pengguna dimasa lalu untuk membuat model. Model tersebut akan dicocokkan dengan serangkaian karakteristik atribut dari barang yang akan direkomendasikan. Barang dengan tingkat kecocokan tertinggi akan menjadi rekomendasi untuk pengguna.
+
 
 ## Evaluation
 
