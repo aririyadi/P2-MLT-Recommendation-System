@@ -229,7 +229,7 @@ Pada pendekatan Content-Based Filtering, performa model diukur menggunakan nilai
 
 #### Formula Precision:
 
-$\[ \text{Precision} = \frac{\text{True Positive (TP)}}{\text{True Positive (TP) + False Positive (FP)}} \]$
+$\ \text{Precision} = \frac{\text{True Positive (TP)}}{\text{True Positive (TP) + False Positive (FP)}} \$
 
 **Keterangan:**
 - **True Positive (TP):** Prediksi yang benar positif, di mana model memprediksi dengan tepat bahwa suatu item relevan.
