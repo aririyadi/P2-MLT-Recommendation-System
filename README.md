@@ -245,6 +245,31 @@ $\ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{
 
 _Cosinus Similarity_ mengukur kesamaan antara dua vektor berdasarkan _cosinus_ dari sudut antara vektor-vektor tersebut. Semakin besar nilai _Cosinus Similarity_, semakin mirip kedua vektor tersebut. Dalam konteks _Content-Based Filtering_, vektor ini mewakili representasi fitur dari item yang dibandingkan.
 
+#### Berikut Evaluasi Menggunakan Pendekatan _Content-Based Filtering_
+```sh
+data[data.judul.eq("Bill & Ted's Bogus Journey")]
+```
+Output:
+**Tabel 4**. JUDUL
+| id   | judul                        | genre                           |
+|------|------------------------------|---------------------------------|
+| 4980 | Bill & Ted's Bogus Journey   | Adventure|Comedy|Fantasy|Scifi  |
+```sh
+movie_recommendations("Bill & Ted's Bogus Journey")
+```
+**Tabel 5**. JUDUL
+| judul                        | genre                                  |
+|------------------------------|----------------------------------------|
+| Time Bandits                 | Adventure|Comedy|Fantasy|Scifi         |
+| Mothra	                     | Adventure|Fantasy|Scifi                |
+| Biggles                      | Adventure|Fantasy|Scifi                |
+| Tin Man	                     | Adventure|Fantasy|Scifi                |
+| Ant-Man and the Wasp         | Action|Adventure|Comedy|Fantasy|Scifi  |
+
+- Film "Bill & Ted's Bogus Journey" memiliki genre Adventure, Comedy, Fantasy, dan Scifi.
+- Model Content-Based Filtering memberikan 5 rekomendasi film dengan genre yang mirip, termasuk Adventure, Comedy, Fantasy, dan Scifi.
+- Dari 5 rekomendasi, semuanya memiliki genre yang sesuai dengan film yang dicari.
+
 ### _Collaborative Filtering_
 Pada pendekatan _Collaborative Filtering_, metrik evaluasi yang digunakan adalah _Root Mean Squared Error (RMSE)_. RMSE digunakan sebagai indikator seberapa baik model _Collaborative Filtering_ mampu memprediksi preferensi pengguna terhadap item dalam sistem rekomendasi. _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model.
 
