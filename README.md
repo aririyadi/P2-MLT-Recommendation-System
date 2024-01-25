@@ -38,16 +38,39 @@ Dalam Proyek ini, dataset yang digunakan untuk pengembangan sistem rekomendasi i
 Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommendation System](https://www.kaggle.com/datasets/nicoletacilibiu/movies-and-ratings-for-recommendation-system).
 
 ### Variabel-Variabel Pada Dataset:
-**Fitur Movies atau `movies.csv`:**
+**Fitur movies atau dataset `movies.csv`:**
 - `movieId`: Informasi nilai unik untuk setiap film.
 - `title`: Informasi judul untuk setiap film.
 - `genres`: Informasi mengenai genre-genre yang terkandung dalam setiap film.
 
-**Fitur Ratings atau `ratings.csv`:**
+**Fitur ratings atau dataset `ratings.csv`:**
 - `userId`: Informasi nilai unik untuk setiap pengguna.
 - `movieId`: Informasi nilai unik untuk setiap film.
 - `rating`: Informasi penilaian numerik yang diberikan oleh pengguna terhadap film tertentu. 
-- `timestamp`: Informasi waktu ketika penilaian diberikan oleh pengguna. 
+- `timestamp`: Informasi waktu ketika penilaian diberikan oleh pengguna.
+
+**Tabel 1**. Informasi statistik pada fitur ratings
+|           | userId           | movieId          | rating           | timestamp          |
+|-----------|------------------|------------------|------------------|--------------------|
+| **count** | 100836.000000    | 100836.000000    | 100836.000000    | 1.008360e+05       |
+| **mean**  | 326.127564       | 19435.295718     | 3.501557         | 1.205946e+09       |
+| **std**   | 182.618491       | 35530.987199     | 1.042529         | 2.162610e+08       |
+| **min**   | 1.000000         | 1.000000         | 0.500000         | 8.281246e+08       |
+| **25%**   | 177.000000       | 1199.000000      | 3.000000         | 1.019124e+09       |
+| **50%**   | 325.000000       | 2991.000000      | 3.500000         | 1.186087e+09       |
+| **75%**   | 477.000000       | 8122.000000      | 4.000000         | 1.435994e+09       |
+| **max**   | 610.000000       | 193609.000000    | 5.000000         | 1.537799e+09       |
+
+**Keterangan:**
+
+- **Count** adalah jumlah sampel pada data.
+- **Mean** adalah nilai rata-rata.
+- **Std** adalah standar deviasi.
+- **Min** yaitu nilai minimum setiap kolom. 
+- **25%** adalah kuartil pertama. Kuartil adalah nilai yang menandai batas interval dalam empat bagian sebaran yang sama. 
+- **50%** adalah kuartil kedua, atau biasa juga disebut median (nilai tengah).
+- **75%** adalah kuartil ketiga.
+- **Max** adalah nilai maksimum.
 
 ## Data Preparation
 
