@@ -181,6 +181,9 @@ Perhatikan gambar diatas, proses training model menunjukkan bahwa model memiliki
 
 #### 5. Mendapatkan Rekomendasi
 Untuk mendapatkan rekomendasi _movie_ atau film, pertama kita ambil sampel _user_ secara acak dan definisikan variabel `movie_not_visited` yang merupakan daftar _movie_ yang belum pernah dikunjungi oleh pengguna. Selanjutnya, untuk memperoleh rekomendasi _movie_ atau film, gunakan fungsi `model.predict()` dari library Keras, kemudian sistem akan memberikan rekomendasi sebagai berikut:
+
+Output :
+
 ```sh
 Menampilkan Rekomendasi untuk Pengguna (User): 599.0
 ===========================
