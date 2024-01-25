@@ -37,6 +37,18 @@ Proyek ini penting karena memberikan solusi bagi masalah kelebihan informasi di 
 Dalam Proyek ini, dataset yang digunakan untuk pengembangan sistem rekomendasi ini diperoleh dari [Kaggle Datasets](https://www.kaggle.com/datasets). Dataset ini berbentuk file zip yang terdiri dari dua file CSV terpisah, yaitu file `movies.csv` yang memiliki total 9742 _rows_ × 3 _columns_ dengan 1 fitur bertipe data _int64_ & 2 fitur bertipe data _object_, dan file `ratings.csv` yang memiliki total 100854 _rows_ × 4 _columns_ dengan 3 fitur bertipe data _int64_ & 1 fitur bertipe data _float64_.
 Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommendation System](https://www.kaggle.com/datasets/nicoletacilibiu/movies-and-ratings-for-recommendation-system).
 
+### Variabel-Variabel Pada Dataset:
+**Fitur Movies atau `movies.csv`:**
+- `movieId`: Informasi nilai unik untuk setiap film.
+- `title`: Informasi judul untuk setiap film.
+- `genres`: Informasi mengenai genre-genre yang terkandung dalam setiap film.
+
+**Fitur Ratings atau `ratings.csv`:**
+- `userId`: Informasi nilai unik untuk setiap pengguna.
+- `movieId`: Informasi nilai unik untuk setiap film.
+- `rating`: Informasi penilaian numerik yang diberikan oleh pengguna terhadap film tertentu. 
+- `timestamp`: Informasi waktu ketika penilaian diberikan oleh pengguna. 
+
 ## Data Preparation
 
 
