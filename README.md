@@ -28,7 +28,7 @@ Proyek ini penting karena memberikan solusi bagi masalah kelebihan informasi di 
 ### Solution statements
 #### Pengembangan Algoritma _Content-Based Filtering_
 - Membangun algoritma yang dapat menganalisis preferensi pengguna berdasarkan sejarah penontonannya, penilaian atau ulasan sebelumnya.
-- Memanfaatkan metode content-based filtering untuk merekomendasikan film dengan karakteristik serupa yang sesuai dengan selera pengguna.
+- Memanfaatkan metode _content-based filtering_ untuk merekomendasikan film dengan karakteristik serupa yang sesuai dengan selera pengguna.
 #### Implementasi _Collaborative Filtering_
 - Mengintegrasikan _collaborative filtering_ untuk memanfaatkan pola perilaku pengguna yang mirip.
 - Menyusun model rekomendasi berdasarkan data pengguna lain dengan preferensi serupa, sehingga meningkatkan akurasi rekomendasi.
