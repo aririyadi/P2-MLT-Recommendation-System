@@ -250,14 +250,17 @@ _Cosinus Similarity_ mengukur kesamaan antara dua vektor berdasarkan _cosinus_ d
 data[data.judul.eq("Bill & Ted's Bogus Journey")]
 ```
 Output:
-**Tabel 4**. JUDUL
+
+**Tabel 4**. Hasil Pencarian Film "Bill & Ted's Bogus Journey"
 | id   | judul                        | genre                           |
 |------|------------------------------|---------------------------------|
 | 4980 | Bill & Ted's Bogus Journey   | Adventure|Comedy|Fantasy|Scifi  |
 ```sh
 movie_recommendations("Bill & Ted's Bogus Journey")
 ```
-**Tabel 5**. JUDUL
+Output:
+
+**Tabel 5**. Hasil Rekomendasi Film Berdasarkan "Bill & Ted's Bogus Journey"
 | judul                        | genre                                  |
 |------------------------------|----------------------------------------|
 | Time Bandits                 | Adventure|Comedy|Fantasy|Scifi         |
@@ -268,7 +271,7 @@ movie_recommendations("Bill & Ted's Bogus Journey")
 
 - Film "Bill & Ted's Bogus Journey" memiliki genre Adventure, Comedy, Fantasy, dan Scifi.
 - Model Content-Based Filtering memberikan 5 rekomendasi film dengan genre yang mirip, termasuk Adventure, Comedy, Fantasy, dan Scifi.
-- Dari 5 rekomendasi, semuanya memiliki genre yang sesuai dengan film yang dicari.
+- Dari 5 rekomendasi, semuanya memiliki genre yang sesuai dengan film yang dicari, menunjukkan konsistensi model dalam memberikan rekomendasi berdasarkan preferensi pengguna.
 
 ### _Collaborative Filtering_
 Pada pendekatan _Collaborative Filtering_, metrik evaluasi yang digunakan adalah _Root Mean Squared Error (RMSE)_. RMSE digunakan sebagai indikator seberapa baik model _Collaborative Filtering_ mampu memprediksi preferensi pengguna terhadap item dalam sistem rekomendasi. _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model.
