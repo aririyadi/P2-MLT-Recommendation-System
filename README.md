@@ -297,11 +297,13 @@ Berdasarkan hasil evaluasi, model _Collaborative Filtering_ menunjukkan kinerja 
 Proses pengembangan sistem rekomendasi film menggunakan teknik machine learning dengan fokus pada _Content-Based Filtering_ dan _Collaborative Filtering_. Proyek ini mengintegrasikan algoritma _Content-Based Filtering_ yang menganalisis preferensi pengguna berdasarkan sejarah penontonan, penilaian, atau ulasan sebelumnya, serta _Collaborative Filtering_ yang memanfaatkan pola perilaku pengguna sejenis. Data yang digunakan berasal dari dataset Kaggle yang terdiri dari informasi film dan penilaian pengguna. _Content-Based Filtering_ menggunakan _TF-IDF Vectorizer_ dan _Cosine Similarity_ untuk memberikan rekomendasi berdasarkan kesamaan fitur genre. Sementara itu, _Collaborative Filtering_ menerapkan _embedding_ dengan model _RecommenderNet_ dan mengukur performanya menggunakan _Root Mean Squared Error (RMSE)_. Evaluasi kedua pendekatan menunjukkan bahwa keduanya memberikan rekomendasi yang sesuai dengan preferensi pengguna dengan akurasi yang tinggi, namun dengan kelebihan dan kekurangan masing-masing. _Content-Based Filtering_ menyediakan rekomendasi yang lebih personal dan dapat menangani _cold start_, tetapi terbatas pada jenis item yang sudah diketahui pengguna. Sementara _Collaborative Filtering_ memberikan rekomendasi yang beragam dan dapat menangani item baru, tetapi rentan terhadap _sparsitas_ data dan kesulitan dalam menangani perubahan drastis dalam preferensi pengguna. Keseluruhan, proyek ini memberikan pemahaman mendalam tentang implementasi kedua pendekatan dalam konteks sistem rekomendasi film.
 
 ## Reference
+[1]. Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). [1](https://doi.org/10.1186/s40537-022-00592-5)
+
 [1]. Wang, F., Zhang, H., & Xie, W. (2022). _Recent Advances in Recommender Systems: A Comprehensive Review_. Journal of Information Science, 48(3), 291-316. DOI: [Link DOI]
 
 [2]. Chen, L., & Li, T. (2019). _Enhancing Collaborative Filtering Recommender Systems: A Comprehensive Survey_. ACM Computing Surveys, 52(1), 1-38. DOI: [Link DOI]
 
 [3]. Gupta, R., & Kumaraguru, P. (2020). _Exploring Content-Based Recommender Systems: A Survey_. Expert Systems with Applications, 149, 113316. DOI: [Link DOI]
 
-[4]. Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). [https://doi.org/10.1186/s40537-022-00592-5]
+
 
