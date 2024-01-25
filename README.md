@@ -246,6 +246,21 @@ $\[ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_
 
 Cosinus Similarity mengukur kesamaan antara dua vektor berdasarkan cosinus dari sudut antara vektor-vektor tersebut. Semakin besar nilai Cosinus Similarity, semakin mirip kedua vektor tersebut. Dalam konteks Content-Based Filtering, vektor ini mewakili representasi fitur dari item yang dibandingkan.
 
+#### Formula Cosinus Similarity:
+
+$\[ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \times \sqrt{\sum_{i=1}^{n} B_i^2}} \]$
+
+**Keterangan:**
+- \( A_i \) dan \( B_i \) adalah komponen vektor dari dua item yang dibandingkan.
+- \( n \) adalah jumlah fitur atau dimensi dalam vektor.
+
+Cosinus Similarity mengukur kesamaan antara dua vektor berdasarkan cosinus dari sudut antara vektor-vektor tersebut. Semakin besar nilai Cosinus Similarity, semakin mirip kedua vektor tersebut. Dalam konteks Content-Based Filtering, vektor ini mewakili representasi fitur dari item yang dibandingkan.
+
+
+
+
+
+
 
 ### Collaborative Filtering
 
