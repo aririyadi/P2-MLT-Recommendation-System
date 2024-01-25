@@ -96,13 +96,27 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 - **Count** adalah jumlah sampel pada data.
 - **Mean** adalah nilai rata-rata.
 - **Std** adalah standar deviasi.
-- **Min** yaitu nilai minimum setiap kolom. 
+- **Min** adalah nilai minimum setiap kolom. 
 - **25%** adalah kuartil pertama. Kuartil adalah nilai yang menandai batas interval dalam empat bagian sebaran yang sama. 
 - **50%** adalah kuartil kedua, atau biasa juga disebut median (nilai tengah).
 - **75%** adalah kuartil ketiga.
 - **Max** adalah nilai maksimum.
 
 ## Data Preparation
+
+### Memisahkan Judul Film dari Tahun Rilis:
+- Menggunakan metode `split()` untuk mendapatkan judul film tanpa tahun rilis.
+- Alasan: Untuk memudahkan analisis data.
+
+### Membulatkan Nilai pada Kolom 'rating':
+- Menggunakan fungsi `np.ceil` untuk membulatkan nilai rating 
+- Alasan: Untuk menyesuaikan skala penilaian dengan nilai bulat.
+
+### Mengubah Format Waktu pada Kolom 'timestamp':
+- Menggunakan fungsi `pd.to_datetime` untuk mengonversi timestamp ke format datetime.
+- Alasan: Memudahkan analisis berbasis waktu.
+
+###
 
 
 ## Modeling
