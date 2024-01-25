@@ -273,6 +273,8 @@ Output:
 - Model Content-Based Filtering memberikan 5 rekomendasi film dengan genre yang mirip, termasuk Adventure, Comedy, Fantasy, dan Scifi.
 - Dari 5 rekomendasi, semuanya memiliki genre yang sesuai dengan film yang dicari, menunjukkan konsistensi model dalam memberikan rekomendasi berdasarkan preferensi pengguna.
 
+Jadi, Cosinus Similarity membantu dalam mengukur kesamaan fitur antara film yang dicari dan film-film rekomendasi, sementara Precision memberikan gambaran tentang seberapa baik model dapat memberikan rekomendasi yang sesuai dengan preferensi pengguna berdasarkan informasi fitur tersebut. Keduanya bekerja bersama untuk memberikan pemahaman yang komprehensif tentang kualitas rekomendasi yang diberikan oleh model Content-Based Filtering.
+
 ### _Collaborative Filtering_
 Pada pendekatan _Collaborative Filtering_, metrik evaluasi yang digunakan adalah _Root Mean Squared Error (RMSE)_. RMSE digunakan sebagai indikator seberapa baik model _Collaborative Filtering_ mampu memprediksi preferensi pengguna terhadap item dalam sistem rekomendasi. _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model.
 
