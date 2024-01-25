@@ -298,6 +298,9 @@ Proses pengembangan sistem rekomendasi film menggunakan teknik machine learning 
 
 ## Reference
 [1]. Ricci, F., Rokach, L., & Shapira, B. (2015). *Introduction to Recommender Systems Handbook*. Springer.
+
 [2]. Adomavicius, G., & Tuzhilin, A. (2005). *Toward the Next Generation of Recommender Systems: A Survey of the State-of-the-Art and Possible Extensions*. IEEE Transactions on Knowledge and Data Engineering, 17(6), 734-749.
+
 [3]. Desrosiers, C., & Karypis, G. (2011). *A Comprehensive Survey of Neighborhood-Based Recommendation Methods*. In *Recommender Systems Handbook* (pp. 107-144). Springer.
+
 [4]. Koren, Y., Bell, R., & Volinsky, C. (2009). *Matrix Factorization Techniques for Recommender Systems*. Computer, 42(8), 30-37.
