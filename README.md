@@ -205,8 +205,20 @@ Widow of St. Pierre, The : Drama|Romance
 Painted Veil, The : Drama|Romance
 Raiders of the Lost Ark: The Adaptation : Action|Adventure|Thriller
 ```
+#### Kelebihan _Collaborative Filtering_:
+- _Collaborative Filtering_ memberikan rekomendasi yang personal karena didasarkan pada preferensi dan perilaku pengguna sejenis.
+- Tidak memerlukan informasi eksplisit tentang item, sehingga cocok untuk sistem dengan banyak item atau di mana deskripsi item sulit didapatkan.
+- Dapat menangani produk baru atau item yang belum pernah dihadapi sebelumnya karena rekomendasi didasarkan pada perilaku pengguna.
+- Secara alami dapat menangkap tren dan perubahan dalam preferensi pengguna seiring waktu.
+- Efektif pada dataset dengan dimensi rendah, di mana tidak ada banyak atribut atau metadata yang terkait dengan item.
 
-
+#### Kekurangan _Collaborative Filtering_:
+- Mengalami kesulitan dalam memberikan rekomendasi untuk pengguna atau item baru yang belum memiliki sejarah preferensi atau interaksi.
+- Rentan terhadap masalah sparsitas pada data, terutama jika sebagian besar pengguna hanya berinteraksi dengan sebagian kecil item.
+- Skalabilitas dapat menjadi masalah ketika jumlah pengguna dan item sangat besar, karena perhitungan kesamaan antar pengguna atau item dapat menjadi rumit.
+- Model hanya dapat merekomendasikan item berdasarkan kesamaan dengan pengguna lain yang serupa. Ini dapat menghasilkan rekomendasi yang kurang beragam.
+- Bergantung pada perilaku pengguna yang sudah ada, sehingga dapat memberikan rekomendasi yang kurang akurat jika aktivitas pengguna tiba-tiba berubah.
+- Kesulitan dalam menangani item atau konten baru yang belum memiliki cukup data untuk dibandingkan dengan pengguna lain.
 
 
 ## Evaluation
