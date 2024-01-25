@@ -38,18 +38,45 @@ Dalam Proyek ini, dataset yang digunakan untuk pengembangan sistem rekomendasi i
 Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommendation System](https://www.kaggle.com/datasets/nicoletacilibiu/movies-and-ratings-for-recommendation-system).
 
 ### Variabel-Variabel Pada Dataset:
-**Fitur movies atau dataset `movies.csv`:**
+**Fitur movies atau dataset `movies.csv`:** Merupakan kumpulan data yang berisi informasi mengenai film-film. Setiap baris dalam dataset ini merepresentasikan satu film, dan kolom-kolomnya memberikan detail tentang atribut-atribut film tersebut.
+
 - `movieId`: Informasi nilai unik untuk setiap film.
 - `title`: Informasi judul untuk setiap film.
 - `genres`: Informasi mengenai genre-genre yang terkandung dalam setiap film.
 
-**Fitur ratings atau dataset `ratings.csv`:**
+**Fitur ratings atau dataset `ratings.csv`:** Merupakan kumpulan data yang berisi informasi tentang penilaian yang diberikan oleh pengguna terhadap film-film dalam dataset. Setiap baris dalam dataset ini merepresentasikan satu penilaian dari seorang pengguna terhadap suatu film.
+
 - `userId`: Informasi nilai unik untuk setiap pengguna.
 - `movieId`: Informasi nilai unik untuk setiap film.
 - `rating`: Informasi penilaian numerik yang diberikan oleh pengguna terhadap film tertentu. 
 - `timestamp`: Informasi waktu ketika penilaian diberikan oleh pengguna.
 
-**Tabel 1**. Informasi statistik pada fitur ratings
+### Univariate Exploratory Data Analysis
+#### Eksplorasi Variabel
+- Eksplorasi variabel menggunakan fungsi `movies.info()` pada variabel _movies_.
+- Eksplorasi variabel menggunakan fungsi `ratings.info()` pada variabel _ratings_.
+- Menampilkan fitur _movies_ menggunakan fungsi `movies.head()`.
+**Tabel 1**. Informasi data pada fitur _movies_
+| movieId | title                                  | genres                                          |
+|---------|----------------------------------------|-------------------------------------------------|
+| 1       | Toy Story (1995)                       | Adventure|Animation|Children|Comedy|Fantasy     |
+| 2       | Jumanji (1995)                         | Adventure|Children|Fantasy                      |
+| 3       | Grumpier Old Men (1995)                | Comedy|Romance                                  |
+| 4       | Waiting to Exhale (1995)               | Comedy|Drama|Romance                            |
+| 5       | Father of the Bride Part II (1995)     | Comedy                                          |
+
+- Menampilkan fitur _ratings_ menggunakan fungsi `ratings.head()`.
+**Tabel 2**. Informasi data pada fitur _movies_
+| userId | movieId | rating | timestamp  |
+|--------|---------|--------|------------|
+| 1      | 1       | 4.0    | 964982703  |
+| 1      | 3       | 4.0    | 964981247  |
+| 1      | 6       | 4.0    | 964982224  |
+| 1      | 47      | 5.0    | 964983815  |
+| 1      | 50      | 5.0    | 964982931  |
+
+- mendeskripsikan fitur _ratings_ menggunakan fungsi `ratings.describe()`.
+**Tabel 3**. Informasi statistik pada fitur ratings
 |           | userId           | movieId          | rating           | timestamp          |
 |-----------|------------------|------------------|------------------|--------------------|
 | **count** | 100836.000000    | 100836.000000    | 100836.000000    | 1.008360e+05       |
@@ -71,6 +98,8 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 - **50%** adalah kuartil kedua, atau biasa juga disebut median (nilai tengah).
 - **75%** adalah kuartil ketiga.
 - **Max** adalah nilai maksimum.
+
+
 
 ## Data Preparation
 
