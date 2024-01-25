@@ -220,6 +220,45 @@ Raiders of the Lost Ark: The Adaptation : Action|Adventure|Thriller
 - Bergantung pada perilaku pengguna yang sudah ada, sehingga dapat memberikan rekomendasi yang kurang akurat jika aktivitas pengguna tiba-tiba berubah.
 - Kesulitan dalam menangani item atau konten baru yang belum memiliki cukup data untuk dibandingkan dengan pengguna lain.
 
-
 ## Evaluation
+Evaluasi dilakukan untuk menilai sejauh mana kinerja model dalam sistem rekomendasi. Dalam konteks proyek ini, penilaian dilakukan dengan menggunakan metrik evaluasi yang sesuai dengan pendekatan yang diterapkan dalam pengembangan sistem rekomendasi.
+
+### Content-Based Filtering
+
+Pada pendekatan Content-Based Filtering, performance model diukur menggunakan nilai metriks precisions dengan similarity. Cosinus Similarity merupakan ukuran yang mengkuantifikasi kesamaan antara dua atau lebih vektor.
+
+![Cosine Similarity](example-cosine-sim.png)
+
+Nilai cosinus similarity memiliki rentang yang terbatas antara 0 dan 1. ukuran kemiripan ditentukan oleh ukuran cosinus sudut antara dua vektor tak nol. Semakin besar nilai cosinus similarity semakin mendekati 1, maka sudut antara kedua vektor juga semakin kecil.
+
+![Precision](precision-for-recommendations.png)
+
+Precision merupakan tingkat ketepatan antara informasi yang diminta oleh pengguna dengan hasil yang diberikan oleh sistem. Precision sangat cocok diterapkan sebagai metriks evaluasi pada sistem rekomendasi yang mana pengukuran kualitas akan ditentukan melalui seberapa bergunakah sistem dapat melakukan prediksi.
+
+Pada pendekatan content-based filtering ini, saya memakai film 'Harry Potter and the Prisioner of Azkaban' untuk mencari rekomendasi film lain yang sesuai.
+
+Dengan memakai metrics precision, maka dapat dihitung:
+- 'Harry Potter and the Prisioner of Azkaban' bergenre Adventure, Fantasy, IMAX.
+- Dari 5 film rekomendasi, terdapat 3 film yang memiliki genre yang sama dengan yang dicari yaitu, genre Adventure, Fantasy, IMAX. film terakhir, merekomendasikan film lain dengan genre drama dan thriller. Ini tidak sesuai dengan apa yang dicari.
+
+Maka, sesuai dengan formula:
+\[ \text{Precision} = \frac{\text{# of our recommended that are relevan}}{\text{# of items we recommended item}} \]
+\[ \text{Precision} = \frac{3}{5} \]
+\[ \text{Precision} = 0.6 \]
+\[ \text{Precision} = 60% \]
+
+Berdasarkan Top 5 rekomendasi film yang diberikan didapatkan pricisions sebesar 60% dari model content-based filtering untuk sistem rekomendasi yang telah dikembangkan.
+
+### Collaborative Filtering
+
+Performance dari pendekatan Collaborative Filtering diukur menggunakan metriks evaluasi Root Mean Squared Error (RMSE). RMSE merupakan cara standar untuk mengukur rata-rata kesalahan suatu model dalam memprediksi.
+
+![RMSE](rmse.png)
+
+Saat melakukan training model, RMSE sangat membantu untuk mengevaluasi dari model dengan melihat penurunan kesalahan pada setiap iterasi (epochs). Kemudian, hasil dari proses training model dapat divisualiasasikan ke dalam plot metrics sebagai berikut.
+
+![Metrics Plot](metrics.png)
+
+Berdasarkan plot metriks di atas, nilai RMSE didapatkan sebesar 0.17 dan pada data validasi sebesar 0.26 yang mana sistem yang telah dikembangkan sudah cukup baik.
+
 
