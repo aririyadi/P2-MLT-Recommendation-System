@@ -23,9 +23,15 @@ Proyek ini penting karena memberikan solusi bagi masalah kelebihan informasi di 
 
 ### Goals
 - Mengembangkan sistem rekomendasi yang dapat memberikan rekomendasi film yang sesuai dengan preferensi pengguna, mengatasi masalah kelebihan informasi, dan meningkatkan pengalaman pengguna.
-- Meningkatkan akurasi rekomendasi dengan memanfaatkan teknik-teknik machine learning terkini, sehingga pengguna merasa lebih terhubung dengan konten yang mereka nikmati.
+- Meningkatkan akurasi rekomendasi dengan memanfaatkan teknik-teknik machine learning seperti _content-based filtering_ dan _collaborative filtering_, sehingga pengguna merasa lebih terhubung dengan konten yang mereka nikmati.
 
 ### Solution statements
+#### Pengembangan Algoritma _Content-Based Filtering_
+- Membangun algoritma yang dapat menganalisis preferensi pengguna berdasarkan sejarah penontonannya, penilaian atau ulasan sebelumnya.
+- Memanfaatkan metode content-based filtering untuk merekomendasikan film dengan karakteristik serupa yang sesuai dengan selera pengguna.
+#### Implementasi _Collaborative Filtering_
+- Mengintegrasikan _collaborative filtering_ untuk memanfaatkan pola perilaku pengguna yang mirip.
+- Menyusun model rekomendasi berdasarkan data pengguna lain dengan preferensi serupa, sehingga meningkatkan akurasi rekomendasi.
 
 ## Data Understanding
 
