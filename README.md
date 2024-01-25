@@ -141,8 +141,15 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 Pada proyek ini, implementasi 2 pendekatan dengan menggunakan teknik _content-based filtering_ dan _collaborative filtering_.
 
 ### _Content-Based Filtering_
-_Content based filtering_ pada Sistem rekomendasi adalah metode yang mempertimbangkan perilaku dari pengguna dari masa lalu yang kemudian diidentifikasi pola perilakunya untuk merekomendasikan barang atau sesuatu yang sesuai dengan pola perilaku tersebut. Metode _content based filtering_ menganalisis preferensi dari perilaku pengguna dimasa lalu untuk membuat model. Model tersebut akan dicocokkan dengan serangkaian karakteristik atribut dari barang yang akan direkomendasikan. Barang dengan tingkat kecocokan tertinggi akan menjadi rekomendasi untuk pengguna. Contoh sederhana, jika seseorang menyukai suatu barang tertentu, dia juga akan menyukai barang yang serupa dengannya. Berikut proses atau tahapan dalam menggunakan metode _content based filtering_:
-- 
+_Content based filtering_ pada Sistem rekomendasi adalah metode yang mempertimbangkan perilaku dari pengguna dari masa lalu yang kemudian diidentifikasi pola perilakunya untuk merekomendasikan barang atau sesuatu yang sesuai dengan pola perilaku tersebut. Metode _content based filtering_ menganalisis preferensi dari perilaku pengguna dimasa lalu untuk membuat model. Model tersebut akan dicocokkan dengan serangkaian karakteristik atribut dari barang yang akan direkomendasikan. Barang dengan tingkat kecocokan tertinggi akan menjadi rekomendasi untuk pengguna. Contoh sederhana, jika seseorang menyukai suatu barang tertentu, dia juga akan menyukai barang yang serupa dengannya. 
+
+**Berikut proses atau tahapan dalam implementasi _content-based filtering_ menggunakan _TF-IDF Vectorizer_ dan _Cosine Similarity_:**
+- Menyiapkan _dataframe_ yang telah dibersihkan pada tahap data _preparation_ sebelumnya.
+- Menggunakan _TfidfVectorizer_ untuk menghitung skor 'TF-IDF' pada data genre.
+- Menghitung _Cosine Similarity_ pada hasil 'TF-IDF' untuk mendapatkan _similarity matrix_.
+- Melakukan Transformasi 'TF-IDF' pada Data Genre dan Memeriksa Ukuran _Matrix_.
+- Membuat fungsi _movie_recommendations_ untuk mendapatkan rekomendasi berdasarkan _similarity matrix_.
+
 
 ## Evaluation
 
