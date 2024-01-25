@@ -221,7 +221,6 @@ Raiders of the Lost Ark: The Adaptation : Action|Adventure|Thriller
 - Kesulitan dalam menangani item atau konten baru yang belum memiliki cukup data untuk dibandingkan dengan pengguna lain.
 
 ## Evaluation
-Evaluasi dilakukan untuk menilai sejauh mana kinerja model dalam sistem rekomendasi. Dalam konteks proyek ini, penilaian dilakukan dengan menggunakan metrik evaluasi yang sesuai dengan pendekatan yang diterapkan dalam pengembangan sistem rekomendasi.
 
 ### _Content-Based Filtering_
 Pada pendekatan _Content-Based Filtering_, performa model diukur menggunakan nilai metrik _precision_ dengan _similarity_. _Cosinus Similarity_ digunakan sebagai ukuran yang mengkuantifikasi kesamaan antara vektor. _Precision_ merupakan tingkat ketepatan antara informasi yang diminta pengguna dengan hasil yang diberikan oleh sistem.
