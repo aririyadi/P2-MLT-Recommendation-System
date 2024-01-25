@@ -34,7 +34,8 @@ Proyek ini penting karena memberikan solusi bagi masalah kelebihan informasi di 
 - Menyusun model rekomendasi berdasarkan data pengguna lain dengan preferensi serupa, sehingga meningkatkan akurasi rekomendasi.
 
 ## Data Understanding
-Dalam Proyek ini, dataset yang digunakan untuk pengembangan sistem rekomendasi ini diperoleh dari [Kaggle Datasets](https://www.kaggle.com/datasets). Dataset ini berbentuk file zip yang terdiri dari dua file CSV terpisah, yaitu `movies.csv` yang memiliki total 3 kolom dan 9742 baris, dan `ratings.csv` yang memiliki total 4 kolom dan 100836 baris.
+Dalam Proyek ini, dataset yang digunakan untuk pengembangan sistem rekomendasi ini diperoleh dari [Kaggle Datasets](https://www.kaggle.com/datasets). Dataset ini berbentuk file zip yang terdiri dari dua file CSV terpisah, yaitu `movies.csv` yang memiliki total 9742 _rows_ × 3 _columns_ dengan 1 fitur bertipe data _int64_ & 2 fitur bertipe data _object_, dan `ratings.csv` yang memiliki total 100854 _rows_ × 7 _columns_ dengan 3 fitur bertipe data _int64_ & 1 fitur bertipe data _float64_.
+
 ## Data Preparation
 
 
