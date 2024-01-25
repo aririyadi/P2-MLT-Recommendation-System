@@ -150,6 +150,9 @@ Berikut proses atau tahapan dalam implementasi _content-based filtering_ menggun
 - Melakukan Transformasi 'TF-IDF' pada Data Genre dan Memeriksa Ukuran _Matrix_.
 - Membuat fungsi _movie_recommendations_ untuk mendapatkan rekomendasi berdasarkan _similarity matrix_.
 
+### _Collaborative Filtering_
+
+
 
 ## Evaluation
 
