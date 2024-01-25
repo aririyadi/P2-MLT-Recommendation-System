@@ -223,10 +223,10 @@ Raiders of the Lost Ark: The Adaptation : Action|Adventure|Thriller
 ## Evaluation
 Evaluasi dilakukan untuk menilai sejauh mana kinerja model dalam sistem rekomendasi. Dalam konteks proyek ini, penilaian dilakukan dengan menggunakan metrik evaluasi yang sesuai dengan pendekatan yang diterapkan dalam pengembangan sistem rekomendasi.
 
-### Content-Based Filtering
-Pada pendekatan Content-Based Filtering, performa model diukur menggunakan nilai metrik precision dengan similarity. Cosinus Similarity digunakan sebagai ukuran yang mengkuantifikasi kesamaan antara vektor. Precision merupakan tingkat ketepatan antara informasi yang diminta pengguna dengan hasil yang diberikan oleh sistem.
+### _Content-Based Filtering_
+Pada pendekatan _Content-Based Filtering_, performa model diukur menggunakan nilai metrik _precision_ dengan _similarity_. _Cosinus Similarity_ digunakan sebagai ukuran yang mengkuantifikasi kesamaan antara vektor. _Precision_ merupakan tingkat ketepatan antara informasi yang diminta pengguna dengan hasil yang diberikan oleh sistem.
 
-#### Formula Precision:
+#### Formula _Precision_:
 
 $\ \text{Precision} = \frac{\text{True Positive (TP)}}{\text{True Positive (TP) + False Positive (FP)}} \$
 
@@ -234,44 +234,17 @@ $\ \text{Precision} = \frac{\text{True Positive (TP)}}{\text{True Positive (TP) 
 - **True Positive (TP):** Prediksi yang benar positif, di mana model memprediksi dengan tepat bahwa suatu item relevan.
 - **False Positive (FP):** Prediksi yang salah positif, di mana model memprediksi bahwa suatu item relevan, padahal sebenarnya tidak.
 
-Formula precision ini memberikan gambaran tentang seberapa banyak dari item yang direkomendasikan oleh model yang benar-benar relevan dengan preferensi pengguna. Precision dapat diinterpretasikan sebagai "dari item yang direkomendasikan, berapa persen yang benar-benar disukai oleh pengguna." Dalam proyek ini, precision dihitung berdasarkan prediksi relevan terhadap item yang direkomendasikan.
+Formula _precision_ ini memberikan gambaran tentang seberapa banyak dari item yang direkomendasikan oleh model yang benar-benar relevan dengan preferensi pengguna. _Precision_ dapat diinterpretasikan sebagai "dari item yang direkomendasikan, berapa persen yang benar-benar disukai oleh pengguna." Dalam proyek ini, _precision_ dihitung berdasarkan prediksi relevan terhadap item yang direkomendasikan.
 
-#### Formula Cosinus Similarity:
+#### Formula _Cosinus Similarity_:
 
-$\[ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \times \sqrt{\sum_{i=1}^{n} B_i^2}} \]$
-
-**Keterangan:**
-- \( A_i \) dan \( B_i \) adalah komponen vektor dari dua item yang dibandingkan.
-- \( n \) adalah jumlah fitur atau dimensi dalam vektor.
-
-Cosinus Similarity mengukur kesamaan antara dua vektor berdasarkan cosinus dari sudut antara vektor-vektor tersebut. Semakin besar nilai Cosinus Similarity, semakin mirip kedua vektor tersebut. Dalam konteks Content-Based Filtering, vektor ini mewakili representasi fitur dari item yang dibandingkan.
-
-#### Formula Cosinus Similarity:
-
-$\[ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \times \sqrt{\sum_{i=1}^{n} B_i^2}} \]$
+$\ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \times \sqrt{\sum_{i=1}^{n} B_i^2}} \$
 
 **Keterangan:**
 - \( A_i \) dan \( B_i \) adalah komponen vektor dari dua item yang dibandingkan.
 - \( n \) adalah jumlah fitur atau dimensi dalam vektor.
 
-Cosinus Similarity mengukur kesamaan antara dua vektor berdasarkan cosinus dari sudut antara vektor-vektor tersebut. Semakin besar nilai Cosinus Similarity, semakin mirip kedua vektor tersebut. Dalam konteks Content-Based Filtering, vektor ini mewakili representasi fitur dari item yang dibandingkan.
+_Cosinus Similarity_ mengukur kesamaan antara dua vektor berdasarkan _cosinus_ dari sudut antara vektor-vektor tersebut. Semakin besar nilai _Cosinus Similarity_, semakin mirip kedua vektor tersebut. Dalam konteks _Content-Based Filtering_, vektor ini mewakili representasi fitur dari item yang dibandingkan.
 
-
-
-
-
-
-
-### Collaborative Filtering
-
-Performance dari pendekatan Collaborative Filtering diukur menggunakan metriks evaluasi Root Mean Squared Error (RMSE). RMSE merupakan cara standar untuk mengukur rata-rata kesalahan suatu model dalam memprediksi.
-
-![RMSE](rmse.png)
-
-Saat melakukan training model, RMSE sangat membantu untuk mengevaluasi dari model dengan melihat penurunan kesalahan pada setiap iterasi (epochs). Kemudian, hasil dari proses training model dapat divisualiasasikan ke dalam plot metrics sebagai berikut.
-
-![Metrics Plot](metrics.png)
-
-Berdasarkan plot metriks di atas, nilai RMSE didapatkan sebesar 0.17 dan pada data validasi sebesar 0.26 yang mana sistem yang telah dikembangkan sudah cukup baik.
-
+### _Collaborative Filtering_
 
