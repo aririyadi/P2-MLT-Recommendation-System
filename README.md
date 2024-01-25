@@ -15,20 +15,15 @@ Proyek ini penting karena memberikan solusi bagi masalah kelebihan informasi di 
 - [Movie Recommendation system(For Deployment)](https://www.kaggle.com/code/terminate9298/movie-recommendation-system-for-deployment)
 - [Sistem Rekomendasi Film Menggunakan Content Based Filtering](https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/download/9163/4159/)
 
-
-
-
-
 ## Business Understanding
 
-
-
 ### Problem Statements
-
-
+- Banyaknya pilihan film di platform streaming membuat pengguna kesulitan dalam menemukan konten yang sesuai dengan preferensi mereka.
+- Keterbatasan sistem rekomendasi saat ini untuk memberikan rekomendasi yang akurat dan personal dapat mengakibatkan pengguna kehilangan minat dalam mengeksplorasi konten baru.
 
 ### Goals
-
+- Mengembangkan sistem rekomendasi yang dapat memberikan rekomendasi film yang sesuai dengan preferensi pengguna, mengatasi masalah kelebihan informasi, dan meningkatkan pengalaman pengguna.
+- Meningkatkan akurasi rekomendasi dengan memanfaatkan teknik-teknik machine learning terkini, sehingga pengguna merasa lebih terhubung dengan konten yang mereka nikmati.
 
 ### Solution statements
 
