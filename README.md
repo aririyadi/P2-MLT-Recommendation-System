@@ -240,8 +240,8 @@ Formula _precision_ ini memberikan gambaran tentang seberapa banyak dari item ya
 $\ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \times \sqrt{\sum_{i=1}^{n} B_i^2}} \$
 
 **Keterangan:**
-- \( A_i \) dan \( B_i \) adalah komponen vektor dari dua item yang dibandingkan.
-- \( n \) adalah jumlah fitur atau dimensi dalam vektor.
+- $\( A_i \)$ dan $\( B_i \)$ adalah komponen vektor dari dua item yang dibandingkan.
+- $\( n \)$ adalah jumlah fitur atau dimensi dalam vektor.
 
 _Cosinus Similarity_ mengukur kesamaan antara dua vektor berdasarkan _cosinus_ dari sudut antara vektor-vektor tersebut. Semakin besar nilai _Cosinus Similarity_, semakin mirip kedua vektor tersebut. Dalam konteks _Content-Based Filtering_, vektor ini mewakili representasi fitur dari item yang dibandingkan.
 
