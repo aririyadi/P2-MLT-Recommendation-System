@@ -150,7 +150,21 @@ Berikut proses atau tahapan dalam implementasi _content-based filtering_ menggun
 - Melakukan Transformasi 'TF-IDF' pada Data Genre dan Memeriksa Ukuran _Matrix_.
 - Membuat fungsi _movie_recommendations_ untuk mendapatkan rekomendasi berdasarkan _similarity matrix_.
 
+#### Kelebihan _Content-Based Filtering_:
+- Menyediakan rekomendasi yang lebih personal karena mempertimbangkan preferensi individu pengguna berdasarkan sejarah interaksi mereka.
+- Lebih baik dalam menangani masalah _cold start_, yaitu memberikan rekomendasi untuk item baru atau pengguna baru karena tidak sepenuhnya bergantung pada perilaku pengguna sebelumnya.
+- Lebih transparan karena dasar rekomendasi dapat dijelaskan dengan mudah, terutama jika diperhitungkan atribut atau karakteristik spesifik item yang digunakan dalam proses rekomendasi.
+- Tidak memerlukan data eksternal tentang perilaku pengguna lainnya, dan dapat berfungsi cukup baik bahkan ketika informasi kolaboratif tentang pengguna tidak tersedia.
+
+#### Kekurangan _Content-Based Filtering_:
+- Cenderung menghasilkan rekomendasi yang terbatas pada jenis item yang sudah diketahui pengguna. Dengan kata lain, mungkin tidak efektif dalam menemukan item baru atau eksplorasi.
+- Kinerjanya tergantung pada seberapa baik konten item direpresentasikan dan dianalisis. Jika representasi konten tidak akurat atau lengkap, maka kualitas rekomendasi dapat menurun.
+- Ada risiko _over-specialization_, di mana rekomendasi menjadi terlalu fokus pada preferensi yang spesifik, mengabaikan variasi atau kejutan yang mungkin diinginkan pengguna.
+- Sulit menangani perubahan drastis dalam preferensi pengguna karena cenderung mempertahankan model yang ada dan kurang fleksibel dalam menyesuaikan perubahan tersebut.
+- Bergantung pada informasi yang ada dalam deskripsi konten item, sehingga tidak efektif untuk item yang kurang memiliki deskripsi atau informasi konten yang relevan.
+
 ### _Collaborative Filtering_
+_Collaborative filtering_ adalah suatu teknik yang umum digunakan dalam sistem rekomendasi untuk memberikan saran yang dipersonalisasi kepada pengguna. Ide dasar di balik _collaborative filtering_ adalah membuat prediksi tentang preferensi atau minat pengguna dengan mengumpulkan preferensi atau perilaku dari beberapa pengguna (kolaborator).
 
 
 
