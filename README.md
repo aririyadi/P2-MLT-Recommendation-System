@@ -138,7 +138,9 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 - Alasan: Mempermudah akses dan penggunaan data.
 
 ## Modeling
+Pada proyek ini, implementasi 2 pendekatan dengan menggunakan teknik _content-based filtering_ dan _collaborative filtering_.
 
+### _Content-Based Filtering_
 
 ## Evaluation
 
