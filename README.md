@@ -225,9 +225,18 @@ Evaluasi dilakukan untuk menilai sejauh mana kinerja model dalam sistem rekomend
 
 ### Content-Based Filtering
 
-Pada pendekatan Content-Based Filtering, performance model diukur menggunakan nilai metriks precisions dengan similarity. Cosinus Similarity merupakan ukuran yang mengkuantifikasi kesamaan antara dua atau lebih vektor.
+Pada pendekatan Content-Based Filtering, performa model diukur menggunakan nilai metrik precision dengan similarity. Cosinus Similarity digunakan sebagai ukuran yang mengkuantifikasi kesamaan antara vektor. Precision merupakan tingkat ketepatan antara informasi yang diminta pengguna dengan hasil yang diberikan oleh sistem.
 
-![Cosine Similarity](example-cosine-sim.png)
+#### Formula Precision:
+
+$\[ \text{Precision} = \frac{\text{True Positive (TP)}}{\text{True Positive (TP) + False Positive (FP)}} \]$
+
+**Keterangan:**
+- **True Positive (TP):** Prediksi yang benar positif, di mana model memprediksi dengan tepat bahwa suatu item relevan.
+- **False Positive (FP):** Prediksi yang salah positif, di mana model memprediksi bahwa suatu item relevan, padahal sebenarnya tidak.
+
+Formula precision ini memberikan gambaran tentang seberapa banyak dari item yang direkomendasikan oleh model yang benar-benar relevan dengan preferensi pengguna. Precision dapat diinterpretasikan sebagai "dari item yang direkomendasikan, berapa persen yang benar-benar disukai oleh pengguna." Dalam proyek ini, precision dihitung berdasarkan prediksi relevan terhadap item yang direkomendasikan.
+
 
 Nilai cosinus similarity memiliki rentang yang terbatas antara 0 dan 1. ukuran kemiripan ditentukan oleh ukuran cosinus sudut antara dua vektor tak nol. Semakin besar nilai cosinus similarity semakin mendekati 1, maka sudut antara kedua vektor juga semakin kecil.
 
