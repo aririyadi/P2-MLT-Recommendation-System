@@ -282,7 +282,7 @@ Pada pendekatan _Collaborative Filtering_, metrik evaluasi yang digunakan adalah
 
 _RMSE_ dihitung dengan rumus berikut:
 
-$\[ RMSE = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2} \]$
+$\ RMSE = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2} \$
 
 Di mana:
 - $\( N \)$ adalah jumlah sampel atau pasangan pengguna-item.
