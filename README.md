@@ -104,20 +104,38 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 
 ## Data Preparation
 
-### Memisahkan Judul Film dari Tahun Rilis:
+#### Memisahkan Judul Film dari Tahun Rilis:
 - Menggunakan metode `split()` untuk mendapatkan judul film tanpa tahun rilis.
 - Alasan: Untuk memudahkan analisis data.
 
-### Membulatkan Nilai pada Kolom 'rating':
+#### Membulatkan Nilai pada Kolom 'rating':
 - Menggunakan fungsi `np.ceil` untuk membulatkan nilai rating 
 - Alasan: Untuk menyesuaikan skala penilaian dengan nilai bulat.
 
-### Mengubah Format Waktu pada Kolom 'timestamp':
+#### Mengubah Format Waktu pada Kolom 'timestamp':
 - Menggunakan fungsi `pd.to_datetime` untuk mengonversi timestamp ke format datetime.
 - Alasan: Memudahkan analisis berbasis waktu.
 
-###
+#### Menggabungkan Data _Movies_ dan _Ratings_ berdasarkan 'movieId':
+- Menggunakan metode `merge` untuk menggabungkan data _movies_ dan _ratings_ berdasarkan 'movieId'.
+- Alasan: Menggabungkan informasi film dan rating pengguna.
 
+#### Mendeteksi dan Menghapus _Missing Values_:
+- Menggunakan `isnull()` untuk mendeteksi _missing values_.
+- Menggunakan `dropna()` untuk menghapus baris dengan _missing values_.
+- Alasan: Membersihkan data dari nilai yang hilang.
+
+#### Menghapus Duplikat Berdasarkan Kolom 'movieId' dan 'title':
+- Menggunakan `drop_duplicates` untuk menghapus duplikat berdasarkan 'movieId' dan 'title'.
+- Alasan: Memastikan setiap film hanya muncul sekali dalam dataset.
+
+#### Mengonversi Data _Series_ menjadi _List_:
+- Mengonversi 'movieId', 'title', dan 'genres' menjadi list.
+- Alasan: Persiapan untuk pembuatan dictionary dan analisis lebih lanjut.
+
+#### Membuat _Dictionary_ dari Data Series:
+- Membuat _dictionary_ dari data 'movieId', 'title', dan 'genres'.
+- Alasan: Mempermudah akses dan penggunaan data.
 
 ## Modeling
 
