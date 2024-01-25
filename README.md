@@ -35,7 +35,7 @@ Proyek ini penting karena memberikan solusi bagi masalah kelebihan informasi di 
 
 ## Data Understanding
 Dalam Proyek ini, dataset yang digunakan untuk pengembangan sistem rekomendasi ini diperoleh dari [Kaggle Datasets](https://www.kaggle.com/datasets). Dataset ini berbentuk file zip yang terdiri dari dua file CSV terpisah, yaitu `movies.csv` yang memiliki total 9742 _rows_ × 3 _columns_ dengan 1 fitur bertipe data _int64_ & 2 fitur bertipe data _object_, dan `ratings.csv` yang memiliki total 100854 _rows_ × 7 _columns_ dengan 3 fitur bertipe data _int64_ & 1 fitur bertipe data _float64_.
-Dataset ini dapat diunduh di [Kaggle : Movies & Ratings for Recommendation System](https://www.kaggle.com/datasets/nicoletacilibiu/movies-and-ratings-for-recommendation-system).
+Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommendation System](https://www.kaggle.com/datasets/nicoletacilibiu/movies-and-ratings-for-recommendation-system).
 
 ## Data Preparation
 
