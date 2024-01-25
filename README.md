@@ -164,7 +164,9 @@ Berikut proses atau tahapan dalam implementasi _content-based filtering_ menggun
 - Bergantung pada informasi yang ada dalam deskripsi konten item, sehingga tidak efektif untuk item yang kurang memiliki deskripsi atau informasi konten yang relevan.
 
 ### _Collaborative Filtering_
-_Collaborative filtering_ adalah suatu teknik yang umum digunakan dalam sistem rekomendasi untuk memberikan saran yang dipersonalisasi kepada pengguna. Ide dasar di balik _collaborative filtering_ adalah membuat prediksi tentang preferensi atau minat pengguna dengan mengumpulkan preferensi atau perilaku dari beberapa pengguna (kolaborator).
+_Collaborative filtering_ adalah suatu teknik yang umum digunakan dalam sistem rekomendasi untuk memberikan saran yang dipersonalisasi kepada pengguna. Ide dasar di balik _collaborative filtering_ adalah membuat prediksi tentang preferensi atau minat pengguna dengan mengumpulkan preferensi atau perilaku dari beberapa pengguna (kolaborator). pada tahap ini, _Collaborative filtering_ menggunakan pendekatan _embedding_ dengan model _RecommenderNet_.
+
+Berikut proses atau tahapan dalam _Collaborative Filtering_:
 
 
 
