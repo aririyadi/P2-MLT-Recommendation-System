@@ -246,4 +246,18 @@ $\ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{
 _Cosinus Similarity_ mengukur kesamaan antara dua vektor berdasarkan _cosinus_ dari sudut antara vektor-vektor tersebut. Semakin besar nilai _Cosinus Similarity_, semakin mirip kedua vektor tersebut. Dalam konteks _Content-Based Filtering_, vektor ini mewakili representasi fitur dari item yang dibandingkan.
 
 ### _Collaborative Filtering_
+Pada pendekatan _Collaborative Filtering_, metrik evaluasi yang digunakan adalah _Root Mean Squared Error (RMSE)_. RMSE digunakan sebagai indikator seberapa baik model _Collaborative Filtering_ mampu memprediksi preferensi pengguna terhadap item dalam sistem rekomendasi. _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model.
+
+#### Formula _RMSE_:
+
+_RMSE_ dihitung dengan rumus berikut:
+
+$\[ RMSE = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2} \]$
+
+Di mana:
+- $\( N \)$ adalah jumlah sampel atau pasangan pengguna-item.
+- $\( y_i \)$ adalah nilai sebenarnya dari preferensi pengguna terhadap item.
+- $\( \hat{y}_i \)$ adalah nilai prediksi model untuk preferensi pengguna terhadap item.
+
+RMSE mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model. Semakin kecil nilai RMSE, semakin baik model dapat memprediksi preferensi pengguna terhadap item.
 
