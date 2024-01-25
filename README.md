@@ -177,7 +177,7 @@ Proses training dilakukan dengan mengimplementasikan teknik _embedding_ pada mod
 
 **Gambar 1**. Visualisasi Metrik Evaluasi
 
-Perhatikan gambar diatas, proses training model menunjukkan bahwa model memiliki performa yang baik dan model konvergen pada epochs sekitar 100. Dari proses ini, kita memperoleh nilai error akhir sebesar sekitar 0.0710 dan error pada data validasi sebesar 0.2618. Nilai tersebut dapat digunakan untuk membuat sistem rekomendasi.
+Perhatikan gambar diatas, proses training model menunjukkan bahwa model memiliki performa yang baik dan model konvergen pada _epochs_ sekitar 100. Dari proses ini, kita memperoleh nilai error akhir sebesar sekitar 0.0710 dan error pada data validasi sebesar 0.2618. Nilai tersebut dapat digunakan untuk membuat sistem rekomendasi.
 
 #### 5. Mendapatkan Rekomendasi
 Untuk mendapatkan rekomendasi _movie_ atau film, pertama kita ambil sampel _user_ secara acak dan definisikan variabel `movie_not_visited` yang merupakan daftar _movie_ yang belum pernah dikunjungi oleh pengguna. Selanjutnya, untuk memperoleh rekomendasi _movie_ atau film, gunakan fungsi `model.predict()` dari library Keras, kemudian sistem akan memberikan rekomendasi sebagai berikut:
