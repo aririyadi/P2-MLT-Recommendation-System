@@ -224,7 +224,6 @@ Raiders of the Lost Ark: The Adaptation : Action|Adventure|Thriller
 Evaluasi dilakukan untuk menilai sejauh mana kinerja model dalam sistem rekomendasi. Dalam konteks proyek ini, penilaian dilakukan dengan menggunakan metrik evaluasi yang sesuai dengan pendekatan yang diterapkan dalam pengembangan sistem rekomendasi.
 
 ### Content-Based Filtering
-
 Pada pendekatan Content-Based Filtering, performa model diukur menggunakan nilai metrik precision dengan similarity. Cosinus Similarity digunakan sebagai ukuran yang mengkuantifikasi kesamaan antara vektor. Precision merupakan tingkat ketepatan antara informasi yang diminta pengguna dengan hasil yang diberikan oleh sistem.
 
 #### Formula Precision:
@@ -237,26 +236,16 @@ $\ \text{Precision} = \frac{\text{True Positive (TP)}}{\text{True Positive (TP) 
 
 Formula precision ini memberikan gambaran tentang seberapa banyak dari item yang direkomendasikan oleh model yang benar-benar relevan dengan preferensi pengguna. Precision dapat diinterpretasikan sebagai "dari item yang direkomendasikan, berapa persen yang benar-benar disukai oleh pengguna." Dalam proyek ini, precision dihitung berdasarkan prediksi relevan terhadap item yang direkomendasikan.
 
+#### Formula Cosinus Similarity:
 
-Nilai cosinus similarity memiliki rentang yang terbatas antara 0 dan 1. ukuran kemiripan ditentukan oleh ukuran cosinus sudut antara dua vektor tak nol. Semakin besar nilai cosinus similarity semakin mendekati 1, maka sudut antara kedua vektor juga semakin kecil.
+$\[ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \times \sqrt{\sum_{i=1}^{n} B_i^2}} \]$
 
-![Precision](precision-for-recommendations.png)
+**Keterangan:**
+- \( A_i \) dan \( B_i \) adalah komponen vektor dari dua item yang dibandingkan.
+- \( n \) adalah jumlah fitur atau dimensi dalam vektor.
 
-Precision merupakan tingkat ketepatan antara informasi yang diminta oleh pengguna dengan hasil yang diberikan oleh sistem. Precision sangat cocok diterapkan sebagai metriks evaluasi pada sistem rekomendasi yang mana pengukuran kualitas akan ditentukan melalui seberapa bergunakah sistem dapat melakukan prediksi.
+Cosinus Similarity mengukur kesamaan antara dua vektor berdasarkan cosinus dari sudut antara vektor-vektor tersebut. Semakin besar nilai Cosinus Similarity, semakin mirip kedua vektor tersebut. Dalam konteks Content-Based Filtering, vektor ini mewakili representasi fitur dari item yang dibandingkan.
 
-Pada pendekatan content-based filtering ini, saya memakai film 'Harry Potter and the Prisioner of Azkaban' untuk mencari rekomendasi film lain yang sesuai.
-
-Dengan memakai metrics precision, maka dapat dihitung:
-- 'Harry Potter and the Prisioner of Azkaban' bergenre Adventure, Fantasy, IMAX.
-- Dari 5 film rekomendasi, terdapat 3 film yang memiliki genre yang sama dengan yang dicari yaitu, genre Adventure, Fantasy, IMAX. film terakhir, merekomendasikan film lain dengan genre drama dan thriller. Ini tidak sesuai dengan apa yang dicari.
-
-Maka, sesuai dengan formula:
-\[ \text{Precision} = \frac{\text{# of our recommended that are relevan}}{\text{# of items we recommended item}} \]
-\[ \text{Precision} = \frac{3}{5} \]
-\[ \text{Precision} = 0.6 \]
-\[ \text{Precision} = 60% \]
-
-Berdasarkan Top 5 rekomendasi film yang diberikan didapatkan pricisions sebesar 60% dari model content-based filtering untuk sistem rekomendasi yang telah dikembangkan.
 
 ### Collaborative Filtering
 
