@@ -303,3 +303,5 @@ Proses pengembangan sistem rekomendasi film menggunakan teknik machine learning 
 
 [3]. Gupta, R., & Kumaraguru, P. (2020). _Exploring Content-Based Recommender Systems: A Survey_. Expert Systems with Applications, 149, 113316. DOI: [Link DOI]
 
+[4]. Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). [https://doi.org/10.1186/s40537-022-00592-5]
+
