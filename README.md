@@ -287,12 +287,12 @@ _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, me
 Berdasarkan Visualisasi Metrik Evaluasi pada **Gambar 1**, dapat disimpulkan bahwa model mungkin menunjukkan hasil yang baik (good fit). Hal ini ditunjukkan oleh fakta bahwa kedua loss (pelatihan dan validasi) cenderung konvergen dan turun seiring waktu. Dari proses ini, model memperoleh nilai error akhir sebesar sekitar 0.0861 dan error pada data validasi sebesar 0.2628. Nilai tersebut dapat digunakan untuk membuat sistem rekomendasi.
 
 Beberapa saran jika hasil Metrik Evaluasi menunjukkan hasil _Overfitting_ atau _Underfitting_:
-##### Overfitting:
+**_Overfitting_:**
 - Menggunakan teknik regularisasi seperti _dropout_, L1/L2 _regularization_.
 - Mengurangi kompleksitas model, misalnya dengan mengurangi jumlah lapisan atau unit.
 - Menambahkan lebih banyak data latih atau menggunakan teknik augmentasi data.
 
-##### Underfitting:
+**_Underfitting_:**
 - Meningkatkan kompleksitas model, seperti menambah jumlah lapisan atau unit.
 - Menambahkan lebih banyak fitur atau meningkatkan representasi fitur.
 - Memastikan model dilatih dengan jumlah epoch yang cukup untuk menangkap pola yang kompleks dalam data.
