@@ -41,6 +41,13 @@ Dalam konteks platform streaming, implementasi sistem rekomendasi memiliki peran
 Dalam Proyek ini, dataset yang digunakan untuk pengembangan sistem rekomendasi ini diperoleh dari [Kaggle Datasets](https://www.kaggle.com/datasets). Dataset ini berbentuk file zip yang terdiri dari dua file CSV terpisah, yaitu file `movies.csv` yang memiliki total 9742 _rows_ × 3 _columns_ dengan 1 fitur bertipe data _int64_ & 2 fitur bertipe data _object_, dan file `ratings.csv` yang memiliki total 100854 _rows_ × 4 _columns_ dengan 3 fitur bertipe data _int64_ & 1 fitur bertipe data _float64_.
 Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommendation System](https://www.kaggle.com/datasets/nicoletacilibiu/movies-and-ratings-for-recommendation-system).
 
+### Beberapa asumsi dan batasan yang perlu diperhatikan dalam penggunaan dataset:
+- Spesifikasi Data Film: Dataset ini mungkin memiliki variasi dalam cakupan genre film, rentang tahun rilis, dan elemen metadata lainnya. Penting untuk memahami keragaman ini agar rekomendasi yang dihasilkan mencerminkan preferensi pengguna dengan lebih baik.
+- Kualitas Penilaian Pengguna: Penilaian atau ulasan yang diberikan oleh pengguna dapat memiliki tingkat subjektivitas yang tinggi. Beberapa pengguna mungkin memberikan penilaian tinggi atau rendah tanpa memberikan alasan yang jelas. Oleh karena itu, perlu mempertimbangkan cara mengatasi variabilitas ini dalam analisis.
+- Data yang Hilang atau Tidak Lengkap: Dataset mungkin memiliki entri yang tidak lengkap atau hilang. Hal ini perlu diperhatikan dalam tahap data preparation, dan strategi perlu dikembangkan untuk menangani nilai yang hilang agar tidak mempengaruhi akurasi rekomendasi.
+- Ketidakseimbangan Data: Ada kemungkinan bahwa beberapa film memiliki lebih banyak penilaian daripada yang lain, menciptakan ketidakseimbangan dalam dataset. Ini dapat memengaruhi performa model, dan perlu dilakukan penanganan khusus, seperti pembobotan, agar rekomendasi tidak terlalu condong pada film-film populer saja.
+- Pemisahan Data Training dan Testing: Untuk mengukur kinerja model dengan benar, dataset perlu dibagi secara proporsional antara data pelatihan (training) dan pengujian (testing). Hal ini penting agar model dapat diuji dengan data yang belum pernah dilihat sebelumnya dan memberikan gambaran yang lebih akurat tentang kinerjanya.
+
 ### Variabel-Variabel Pada Dataset:
 **Fitur movies atau dataset `movies.csv`:** Merupakan kumpulan data yang berisi informasi mengenai film-film. Setiap baris dalam dataset ini merepresentasikan satu film, dan kolom-kolomnya memberikan detail tentang atribut-atribut film tersebut.
 
