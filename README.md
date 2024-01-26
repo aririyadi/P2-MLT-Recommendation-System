@@ -196,28 +196,28 @@ _Collaborative filtering_ mengandalkan pola perilaku pengguna sejenis untuk memb
 - **Training**: Proses training dilakukan dengan mengimplementasikan teknik _embedding_ pada model _RecommenderNet_ untuk menghitung skor kecocokan antara film dan pengguna. Dalam proses _compile_, _BinaryCrossentropy_ digunakan sebagai fungsi kerugian untuk tugas prediksi _biner_, sementara _Adam optimizer_ dengan _learning rate_ 0.001 dan _Root Mean Squared Error (RMSE)_ sebagai metrik evaluasi. Pelatihan model berlangsung selama 100 epochs dengan batch size 32, menggunakan data latih untuk melatih model dan data validasi untuk evaluasi. _Callback EarlyStopping_ diterapkan dengan _patience_ 5, sehingga pelatihan akan berhenti jika tidak ada peningkatan yang signifikan dalam metrik validasi selama 5 _epoch_ berturut-turut. Setelah pelatihan, model dievaluasi menggunakan data validasi untuk memastikan generalisasi yang baik.
 - **Mendapatkan Rekomendasi**: Untuk mendapatkan rekomendasi _movie_ atau film, pertama kita ambil sampel _user_ secara acak dan definisikan variabel `movie_not_visited` yang merupakan daftar _movie_ yang belum pernah dikunjungi oleh pengguna. Selanjutnya, untuk memperoleh rekomendasi _movie_ atau film, gunakan fungsi `model.predict()` dari library Keras, kemudian sistem akan memberikan rekomendasi sebagai berikut:
 ```sh
-Menampilkan Rekomendasi untuk Pengguna (User): 599.0
+Menampilkan Rekomendasi untuk Pengguna (User): 387.0
 ===========================
 Film dengan Rating Tinggi dari Pengguna (User)
 --------------------------------
-His Girl Friday : Comedy|Romance
-Key Largo : Crime|Drama|Film-Noir|Thriller
-On the Beach : Drama
-Badlands : Crime|Drama|Thriller
-Mulholland Dr. : Drama|Mystery|Romance
+Do the Right Thing : Drama
+Another Woman : Drama
+Donnie Darko : Drama|Mystery|Scifi|Thriller
+What's Up, Doc? : Comedy
+Through a Glass Darkly : Drama
 --------------------------------
 10 Rekomendasi Film Teratas
 --------------------------------
-Surviving the Game : Action|Adventure|Thriller
-Jaws : Action|Horror
-Shooting Fish : Comedy|Romance
-Woman in the Dunes : Drama
-Cup, The : Comedy
-Frequency : Drama|Thriller
-In the Mood For Love : Drama|Romance
-Widow of St. Pierre, The : Drama|Romance
-Painted Veil, The : Drama|Romance
-Raiders of the Lost Ark: The Adaptation : Action|Adventure|Thriller
+When We Were Kings : Documentary
+Flamingo Kid, The : Comedy|Drama
+Before Night Falls : Drama
+Changing Lanes : Drama|Thriller
+Cherish : Comedy|Drama|Thriller
+Man Who Fell to Earth, The : Drama|Scifi
+Talladega Nights: The Ballad of Ricky Bobby : Action|Comedy
+Into the Wild : Action|Adventure|Drama
+Visitor, The : Drama|Romance
+Submarine : Comedy|Drama|Romance
 ```
 
 #### Kelebihan _Collaborative Filtering_:
@@ -284,7 +284,7 @@ _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, me
 
 **Gambar 1**. Visualisasi Metrik Evaluasi
 
-Berdasarkan Visualisasi Metrik Evaluasi pada **Gambar 1**, dapat disimpulkan bahwa model mungkin menunjukkan hasil yang baik (good fit). Hal ini ditunjukkan oleh fakta bahwa kedua loss (pelatihan dan validasi) cenderung konvergen dan turun seiring waktu. Dari proses ini, model memperoleh nilai error akhir sebesar sekitar 0.0861 dan error pada data validasi sebesar 0.2628. Nilai tersebut dapat digunakan untuk membuat sistem rekomendasi.
+Berdasarkan Visualisasi Metrik Evaluasi pada **Gambar 1**, dapat disimpulkan bahwa model mungkin menunjukkan hasil yang baik (good fit). Hal ini ditunjukkan oleh fakta bahwa kedua loss (pelatihan dan validasi) cenderung konvergen dan mengalami penurunan seiring berjalannya waktu. Melalui proses ini, model berhasil mencapai nilai error akhir sekitar 0.0737 dan error pada data validasi sebesar 0.2619. Nilai-nilai tersebut dapat digunakan untuk membangun sistem rekomendasi.
 
 Beberapa saran jika hasil Metrik Evaluasi menunjukkan hasil _Overfitting_ atau _Underfitting_:
 **_Overfitting_:**
@@ -297,7 +297,7 @@ Beberapa saran jika hasil Metrik Evaluasi menunjukkan hasil _Overfitting_ atau _
 - Menambahkan lebih banyak fitur atau meningkatkan representasi fitur.
 - Memastikan model dilatih dengan jumlah epoch yang cukup untuk menangkap pola yang kompleks dalam data.
 
-Berdasarkan hasil evaluasi secara keseluruhan, model _Collaborative Filtering_ menunjukkan kinerja yang baik dengan kemampuan untuk memprediksi preferensi pengguna secara akurat. Meskipun terdapat sedikit perbedaan antara hasil pada data latih dan data validasi, namun nilai _RMSE_ yang relatif kecil pada keduanya menandakan bahwa model tersebut umumnya dapat digeneralisasikan dengan baik pada data yang tidak terlihat selama pelatihan. Nilai _Root Mean Squared Error (RMSE)_ yang dicapai pada data latih sebesar 0.0861 dan pada data validasi sebesar 0.2628 menunjukkan bahwa model memiliki tingkat akurasi yang tinggi dalam memprediksi preferensi pengguna terhadap item. Semakin kecil nilai _RMSE_, semakin baik kemampuan model dalam membuat prediksi yang mendekati nilai sebenarnya. Dengan nilai _RMSE_ yang relatif kecil, model _Collaborative Filtering_ dapat dianggap berhasil dalam tugas rekomendasi item berdasarkan preferensi pengguna.
+Berdasarkan hasil evaluasi secara keseluruhan, model _Collaborative Filtering_ menunjukkan kinerja yang baik dengan kemampuan untuk memprediksi preferensi pengguna secara akurat. Meskipun terdapat sedikit perbedaan antara hasil pada data latih dan data validasi, namun nilai _RMSE_ yang relatif kecil pada keduanya menandakan bahwa model tersebut umumnya dapat digeneralisasikan dengan baik pada data yang tidak terlihat selama pelatihan. Nilai _Root Mean Squared Error (RMSE)_ yang dicapai pada data latih sebesar 0.0737 dan pada data validasi sebesar 0.2619 menunjukkan bahwa model memiliki tingkat akurasi yang tinggi dalam memprediksi preferensi pengguna terhadap item. Semakin kecil nilai _RMSE_, semakin baik kemampuan model dalam membuat prediksi yang mendekati nilai sebenarnya. Dengan nilai _RMSE_ yang relatif kecil, model _Collaborative Filtering_ dapat dianggap berhasil dalam tugas rekomendasi item berdasarkan preferensi pengguna.
 
 ## Conclusion
 Proses pengembangan sistem rekomendasi film menggunakan teknik machine learning dengan fokus pada _Content-Based Filtering_ dan _Collaborative Filtering_. Proyek ini mengintegrasikan algoritma _Content-Based Filtering_ yang menganalisis preferensi pengguna berdasarkan sejarah penontonan, penilaian, atau ulasan sebelumnya, serta _Collaborative Filtering_ yang memanfaatkan pola perilaku pengguna sejenis. Data yang digunakan berasal dari dataset Kaggle yang terdiri dari informasi film dan penilaian pengguna. _Content-Based Filtering_ menggunakan _TF-IDF Vectorizer_ dan _Cosine Similarity_ untuk memberikan rekomendasi berdasarkan kesamaan fitur genre. Sementara itu, _Collaborative Filtering_ menerapkan _embedding_ dengan model _RecommenderNet_ dan mengukur performanya menggunakan _Root Mean Squared Error (RMSE)_. Evaluasi kedua pendekatan menunjukkan bahwa keduanya memberikan rekomendasi yang sesuai dengan preferensi pengguna dengan akurasi yang tinggi, namun dengan kelebihan dan kekurangan masing-masing. _Content-Based Filtering_ menyediakan rekomendasi yang lebih personal dan dapat menangani _cold start_, tetapi terbatas pada jenis item yang sudah diketahui pengguna. Sementara _Collaborative Filtering_ memberikan rekomendasi yang beragam dan dapat menangani item baru, tetapi rentan terhadap _sparsitas_ data dan kesulitan dalam menangani perubahan drastis dalam preferensi pengguna. Keseluruhan, proyek ini memberikan pemahaman mendalam tentang implementasi kedua pendekatan dalam konteks sistem rekomendasi film.
