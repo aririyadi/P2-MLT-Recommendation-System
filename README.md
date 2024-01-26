@@ -9,7 +9,7 @@ Sistem rekomendasi telah menjadi komponen krusial dalam berbagai industri, menye
 
 Secara keseluruhan sistem rekomendasi menciptakan pengalaman yang lebih personal dan relevan bagi pengguna, meningkatkan kepuasan, retensi dan optimisasi strategi bisnis dengan kata lain sistem rekomendasi telah menjadi aset berharga dalam menyediakan layanan yang disesuaikan dengan preferensi pengguna, membantu bisnis dan meningkatkan efisiensi operasional serta mencapai tujuan bisnis mereka.
 
-Proyek ini bertujuan untuk mengembangkan sistem rekomendasi film menggunakan teknik machine learning. Saat ini, di era digital, masyarakat memiliki akses yang melimpah ke berbagai konten audio-visual, termasuk film. Namun, jumlah film yang tersedia dapat membuat pengguna bingung untuk memilih film yang sesuai dengan preferensi mereka. Sistem rekomendasi film adalah solusi yang efektif untuk memberikan rekomendasi yang personal dan relevan kepada pengguna berdasarkan sejarah penontonannya.
+Dengan fokus pada tema "Movie Recommendation System," proyek ini bertujuan untuk mengembangkan sistem rekomendasi film menggunakan teknik machine learning. Di tengah era digital saat ini, di mana masyarakat memiliki akses yang melimpah ke berbagai konten audio-visual, termasuk film, seringkali pengguna merasa kesulitan memilih film yang sesuai dengan preferensi pribadi mereka. Oleh karena itu, sistem rekomendasi film menjadi solusi yang sangat diandalkan untuk menyajikan rekomendasi yang tidak hanya personal namun juga relevan. Proyek ini secara khusus berfokus pada memanfaatkan data sejarah penonton untuk meningkatkan keakuratan rekomendasi, membantu pengguna menemukan film yang sesuai dengan selera mereka.
 
 ### References and Related Research
 
