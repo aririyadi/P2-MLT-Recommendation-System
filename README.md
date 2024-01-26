@@ -19,6 +19,7 @@ Dengan fokus pada tema "Movie Recommendation System," proyek ini bertujuan untuk
 - [Sistem Rekomendasi Film Menggunakan Content Based Filtering](https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/download/9163/4159/)
 
 ## Business Understanding
+Dalam konteks platform streaming, implementasi sistem rekomendasi memiliki peran strategis dalam meningkatkan retensi pengguna dan meningkatkan pendapatan. Dengan menyediakan rekomendasi yang lebih akurat dan personal, platform dapat meningkatkan kepuasan pelanggan, membuat pengalaman pengguna lebih menyenangkan, dan secara langsung berkontribusi pada pertumbuhan bisnis.
 
 ### Problem Statements
 - Banyaknya pilihan film di platform streaming membuat pengguna kesulitan dalam menemukan konten yang sesuai dengan preferensi mereka.
