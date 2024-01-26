@@ -281,7 +281,8 @@ Di mana:
 _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model. Semakin kecil nilai _RMSE_, semakin baik model dapat memprediksi preferensi pengguna terhadap item.
 
 #### Metrik Evaluasi
-![1](https://github.com/aririyadi/P2-MLT-Recommendation-System/assets/147322531/d2e1a3d6-c4fe-4dd1-af6f-65d58b394f70)
+![1](https://github.com/aririyadi/P2-MLT-Recommendation-System/assets/147322531/f637f8cd-054a-4a6a-8960-9069f927f9d9)
+
 
 **Gambar 1**. Visualisasi Metrik Evaluasi
 
