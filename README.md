@@ -286,7 +286,7 @@ _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, me
 
 **Gambar 1**. Visualisasi Metrik Evaluasi
 
-Perhatikan Gambar 1 diatas, proses training model menunjukkan bahwa model memiliki performa yang baik dan model konvergen pada _epochs_ sekitar 84. Dari proses ini, kita memperoleh nilai error akhir sebesar sekitar 0.0861 dan error pada data validasi sebesar 0.2628. Nilai tersebut dapat digunakan untuk membuat sistem rekomendasi.
+Perhatikan **Gambar 1**, proses training model menunjukkan bahwa model memiliki performa yang baik dan model konvergen pada _epochs_ sekitar 84. Dari proses ini, kita memperoleh nilai error akhir sebesar sekitar 0.0861 dan error pada data validasi sebesar 0.2628. Nilai tersebut dapat digunakan untuk membuat sistem rekomendasi.
 
 Berdasarkan hasil evaluasi, model _Collaborative Filtering_ menunjukkan kinerja yang baik dengan kemampuan untuk memprediksi preferensi pengguna secara akurat. Meskipun terdapat sedikit perbedaan antara hasil pada data latih dan data validasi, namun nilai _RMSE_ yang relatif kecil pada keduanya menandakan bahwa model tersebut dapat umumnya digeneralisasikan dengan baik pada data yang tidak terlihat selama pelatihan. Nilai _Root Mean Squared Error (RMSE)_ yang dicapai pada data latih sebesar 0.0861 dan pada data validasi sebesar 0.2628 menunjukkan bahwa model memiliki tingkat akurasi yang tinggi dalam memprediksi preferensi pengguna terhadap item. Semakin kecil nilai _RMSE_, semakin baik kemampuan model dalam membuat prediksi yang mendekati nilai sebenarnya. Dengan nilai _RMSE_ yang relatif kecil, model _Collaborative Filtering_ dapat dianggap berhasil dalam tugas rekomendasi item berdasarkan preferensi pengguna.
 
