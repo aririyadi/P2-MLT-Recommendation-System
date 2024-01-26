@@ -3,24 +3,24 @@
 ## Project Overview
 Sistem rekomendasi telah menjadi komponen krusial dalam berbagai industri, menyediakan layanan yang disesuaikan dengan preferensi pengguna. Berikut tren penggunaan sistem rekomendasi di berbagai industri dan dampaknya terhadap pengalaman pengguna serta strategi bisnis:
 
-- Pada platform e-commerce seperti Amazon, Alibaba, dan eBay sistem rekomendasi dapat meningkatkan konversi penjualan, meningkatkan retensi pelanggan, dan memperluas keranjang belanja dengan merekomendasikan produk tambahan.
-- Pada layanan streaming seperti Netflix, Spotify, dan YouTube sistem rekomendasi dapat meningkatkan retensi pengguna, mengurangi churn, dan meningkatkan waktu penontonan dengan menyajikan konten yang sesuai.
-- Pada platform perjalanan seperti Booking.com, Airbnb, dan TripAdvisor sistem rekomendasi dapat meningkatkan kepuasan pelanggan, memberikan pengalaman perjalanan yang disesuaikan, dan mendorong reservasi berulang.
+- Pada _platform e-commerce_ seperti _Amazon_, _Alibaba_, dan _eBay_ sistem rekomendasi dapat meningkatkan konversi penjualan, meningkatkan retensi pelanggan, dan memperluas keranjang belanja dengan merekomendasikan produk tambahan.
+- Pada _platform_ _streaming_ seperti _Netflix_, _Spotify_, dan _YouTube_ sistem rekomendasi dapat meningkatkan retensi pengguna, mengurangi churn, dan meningkatkan waktu penontonan dengan menyajikan konten yang sesuai.
+- Pada _platform_ perjalanan seperti _Booking.com_, _Airbnb_, dan _TripAdvisor_ sistem rekomendasi dapat meningkatkan kepuasan pelanggan, memberikan pengalaman perjalanan yang disesuaikan, dan mendorong reservasi berulang.
 
 Secara keseluruhan sistem rekomendasi menciptakan pengalaman yang lebih personal dan relevan bagi pengguna, meningkatkan kepuasan, retensi dan optimisasi strategi bisnis dengan kata lain sistem rekomendasi telah menjadi aset berharga dalam menyediakan layanan yang disesuaikan dengan preferensi pengguna, membantu bisnis dan meningkatkan efisiensi operasional serta mencapai tujuan bisnis mereka.
 
-Dengan fokus pada tema "Movie Recommendation System," proyek ini bertujuan untuk mengembangkan sistem rekomendasi film menggunakan teknik machine learning. Di tengah era digital saat ini, di mana masyarakat memiliki akses yang melimpah ke berbagai konten audio-visual, termasuk film, seringkali pengguna merasa kesulitan memilih film yang sesuai dengan preferensi pribadi mereka. Oleh karena itu, sistem rekomendasi film menjadi solusi yang sangat diandalkan untuk menyajikan rekomendasi yang tidak hanya personal namun juga relevan. Proyek ini secara khusus berfokus pada memanfaatkan data sejarah penonton untuk meningkatkan keakuratan rekomendasi, membantu pengguna menemukan film yang sesuai dengan selera mereka.
+Dengan fokus pada tema "Movie Recommendation System", proyek ini bertujuan untuk mengembangkan sistem rekomendasi film menggunakan teknik machine learning. Di tengah era digital saat ini, di mana masyarakat memiliki akses yang melimpah ke berbagai konten audio-visual, termasuk film, seringkali pengguna merasa kesulitan memilih film yang sesuai dengan preferensi pribadi mereka. Oleh karena itu, sistem rekomendasi film menjadi solusi yang sangat diandalkan untuk menyajikan rekomendasi yang tidak hanya personal namun juga relevan. Proyek ini secara khusus berfokus pada memanfaatkan data sejarah penonton untuk meningkatkan keakuratan rekomendasi, membantu pengguna menemukan film yang sesuai dengan selera mereka.
 
 ## Business Understanding
-Dalam konteks platform streaming, implementasi sistem rekomendasi memiliki peran strategis dalam meningkatkan retensi pengguna dan meningkatkan pendapatan. Dengan menyediakan rekomendasi yang lebih akurat dan personal, platform dapat meningkatkan kepuasan pelanggan, membuat pengalaman pengguna lebih menyenangkan, dan secara langsung berkontribusi pada pertumbuhan bisnis.
+Dalam konteks _platform streaming_, implementasi sistem rekomendasi memiliki peran strategis dalam meningkatkan retensi pengguna dan meningkatkan pendapatan. Dengan menyediakan rekomendasi yang lebih akurat dan personal, _platform streaming_ dapat meningkatkan kepuasan pelanggan, membuat pengalaman pengguna lebih menyenangkan, dan secara langsung berkontribusi pada pertumbuhan bisnisnya.
 
 ### Problem Statements
-- Banyaknya pilihan film di platform streaming membuat pengguna kesulitan dalam menemukan konten yang sesuai dengan preferensi mereka.
-- Keterbatasan sistem rekomendasi saat ini untuk memberikan rekomendasi yang akurat dan personal dapat mengakibatkan pengguna kehilangan minat dalam mengeksplorasi konten baru.
+- Banyaknya pilihan film di _platform streaming_ membuat pengguna kesulitan dalam menemukan film yang sesuai dengan preferensi mereka.
+- Keterbatasan sistem rekomendasi saat ini untuk memberikan rekomendasi yang akurat dan personal dapat mengakibatkan pengguna kehilangan minat dalam mengeksplorasi film baru.
 
 ### Goals
 - Mengembangkan sistem rekomendasi yang dapat memberikan rekomendasi film yang sesuai dengan preferensi pengguna, mengatasi masalah kelebihan informasi, dan meningkatkan pengalaman pengguna.
-- Meningkatkan akurasi rekomendasi dengan memanfaatkan teknik-teknik machine learning seperti _content-based filtering_ dan _collaborative filtering_, sehingga pengguna merasa lebih terhubung dengan konten yang mereka nikmati.
+- Meningkatkan akurasi rekomendasi dengan memanfaatkan teknik-teknik machine learning seperti _content-based filtering_ dan _collaborative filtering_, sehingga pengguna merasa lebih terhubung dengan film yang mereka nikmati.
 
 ### Solution statements
 #### Pengembangan Algoritma _Content-Based Filtering_
