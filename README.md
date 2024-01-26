@@ -171,10 +171,15 @@ _Collaborative filtering_ mengandalkan pola perilaku pengguna sejenis untuk memb
 #### Implementasi _collaborative filtering_:
 
 - Data Preparation
+
 Melakukan _encode_ pada feature 'userId' dan 'movieId'. proses _encode_ akan memetakan setiap nilai pada kedua _feature_ tersebut ke dalam bentuk _index_.
+
 - Pembagian Data Train dan Validasi
+
 Pembagian data train dan validasi dilakukan dengan komposisi 80:20. Pembagian ini bertujuan untuk mencapai sejumlah tujuan kritis dalam proses pengembangan model dan membantu memastikan kehandalan serta kinerja yang optimal pada berbagai kondisi penggunaan.
+
 - Training
+
 Proses training dilakukan dengan mengimplementasikan teknik _embedding_ pada model _RecommenderNet_ untuk menghitung skor kecocokan antara film dan pengguna. Dalam proses _compile_, _BinaryCrossentropy_ digunakan sebagai fungsi kerugian untuk tugas prediksi _biner_, sementara _Adam optimizer_ dengan _learning rate_ 0.001 dan _Root Mean Squared Error (RMSE)_ sebagai metrik evaluasi. Pelatihan model berlangsung selama 100 epochs dengan batch size 32, menggunakan data latih untuk melatih model dan data validasi untuk evaluasi. _Callback EarlyStopping_ diterapkan dengan _patience_ 5, sehingga pelatihan akan berhenti jika tidak ada peningkatan yang signifikan dalam metrik validasi selama 5 _epoch_ berturut-turut. Setelah pelatihan, model dievaluasi menggunakan data validasi untuk memastikan generalisasi yang baik.
 
 #### 4. Metrik Evaluasi
