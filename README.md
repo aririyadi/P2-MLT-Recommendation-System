@@ -143,7 +143,7 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 Pada proyek ini, implementasi 2 pendekatan dengan menggunakan teknik _content-based filtering_ dan _collaborative filtering_.
 
 ### _Content-Based Filtering_
-_Content based filtering_ pada Sistem rekomendasi adalah metode yang mempertimbangkan perilaku dari pengguna dari masa lalu yang kemudian diidentifikasi pola perilakunya untuk merekomendasikan barang atau sesuatu yang sesuai dengan pola perilaku tersebut. Metode _content based filtering_ menganalisis preferensi dari perilaku pengguna dimasa lalu untuk membuat model. Model tersebut akan dicocokkan dengan serangkaian karakteristik atribut dari barang yang akan direkomendasikan. Barang dengan tingkat kecocokan tertinggi akan menjadi rekomendasi untuk pengguna. Contoh sederhana, jika seseorang menyukai suatu barang tertentu, dia juga akan menyukai barang yang serupa dengannya. 
+_Content-based filtering_ pada sistem rekomendasi ini mempertimbangkan perilaku pengguna dari masa lalu untuk mengidentifikasi pola perilaku dan merekomendasikan film yang sesuai. Prosesnya melibatkan analisis preferensi pengguna berdasarkan sejarah penontonan, penilaian, atau ulasan sebelumnya. Dengan menggunakan metode _TF-IDF Vectorizer_ dan _Cosine Similarity_, sistem ini mengevaluasi kesamaan fitur genre antara film. Rekomendasi personal dan kemampuan menangani _cold start_ adalah kelebihan utama, meskipun terbatas pada jenis item yang sudah diketahui pengguna.
 
 Berikut proses atau tahapan dalam implementasi _content-based filtering_ menggunakan _TF-IDF Vectorizer_ dan _Cosine Similarity_:
 - Menyiapkan _dataframe_ yang telah dibersihkan pada tahap data _preparation_ sebelumnya.
@@ -166,7 +166,9 @@ Berikut proses atau tahapan dalam implementasi _content-based filtering_ menggun
 - Bergantung pada informasi yang ada dalam deskripsi konten item, sehingga tidak efektif untuk item yang kurang memiliki deskripsi atau informasi konten yang relevan.
 
 ### _Collaborative Filtering_
-_Collaborative filtering_ adalah suatu teknik yang umum digunakan dalam sistem rekomendasi untuk memberikan saran yang dipersonalisasi kepada pengguna. Ide dasar di balik _collaborative filtering_ adalah membuat prediksi tentang preferensi atau minat pengguna dengan mengumpulkan preferensi atau perilaku dari beberapa pengguna (kolaborator). pada tahap ini, _Collaborative filtering_ menggunakan pendekatan _embedding_ dengan model _RecommenderNet_. Berikut proses atau tahapan dalam implementasi _collaborative filtering_:
+_Collaborative filtering_ mengandalkan pola perilaku pengguna sejenis untuk memberikan rekomendasi film. Dengan pendekatan _embedding_ dan model _RecommenderNet_, sistem ini menghitung skor kecocokan antara film dan pengguna. pada proses training melibatkan pembagian data train dan validasi, serta penggunaan _BinaryCrossentropy_ sebagai fungsi kerugian. Penggunaan _EarlyStopping_ memastikan pelatihan model berhenti jika tidak ada peningkatan signifikan dalam evaluasi validasi. _Collaborative filtering_ memberikan rekomendasi yang beragam, meskipun bisa rentan terhadap _sparsitas_ data dan sulit menangani perubahan drastis dalam preferensi pengguna.
+
+Berikut proses atau tahapan dalam implementasi _collaborative filtering_:
 
 #### 1. Data Preparation
 Melakukan _encode_ pada feature 'userId' dan 'movieId'. proses _encode_ akan memetakan setiap nilai pada kedua _feature_ tersebut ke dalam bentuk _index_.
