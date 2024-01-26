@@ -145,6 +145,34 @@ Berikut proses atau tahapan dalam implementasi _content-based filtering_ menggun
 - Melakukan Transformasi 'TF-IDF' pada Data Genre dan Memeriksa Ukuran _Matrix_.
 - Membuat fungsi _movie_recommendations_ untuk mendapatkan rekomendasi berdasarkan _similarity matrix_.
 
+#### Top N Rekomendasi _Content-Based Filtering_
+```sh
+data[data.judul.eq("Bill & Ted's Bogus Journey")]
+```
+Output:
+
+**Tabel 4**. Hasil Pencarian Film "Bill & Ted's Bogus Journey"
+| id   | judul                        | genre                           |
+|------|------------------------------|---------------------------------|
+| 4980 | Bill & Ted's Bogus Journey   | Adventure-Comedy-Fantasy-Scifi  |
+```sh
+movie_recommendations("Bill & Ted's Bogus Journey")
+```
+Output:
+
+**Tabel 5**. Hasil Rekomendasi Film Berdasarkan "Bill & Ted's Bogus Journey"
+| judul                        | genre                                  |
+|------------------------------|----------------------------------------|
+| Time Bandits                 | Adventure-Comedy-Fantasy-Scifi         |
+| Mothra	                     | Adventure-Fantasy-Scifi                |
+| Biggles                      | Adventure-Fantasy-Scifi                |
+| Tin Man	                     | Adventure-Fantasy-Scifi                |
+| Ant-Man and the Wasp         | Action-Adventure-Comedy-Fantasy-Scifi  |
+
+- Film "Bill & Ted's Bogus Journey" memiliki genre Adventure, Comedy, Fantasy, dan Scifi.
+- Model _Content-Based Filtering_ memberikan 5 rekomendasi film dengan genre yang mirip, termasuk Adventure, Comedy, Fantasy, dan Scifi.
+- Dari 5 rekomendasi, semuanya memiliki genre yang sesuai dengan film yang dicari, menunjukkan konsistensi model dalam memberikan rekomendasi berdasarkan preferensi pengguna.
+
 #### Kelebihan _Content-Based Filtering_:
 - Menyediakan rekomendasi yang lebih personal karena mempertimbangkan preferensi individu pengguna berdasarkan sejarah interaksi mereka.
 - Lebih baik dalam menangani masalah _cold start_, yaitu memberikan rekomendasi untuk item baru atau pengguna baru karena tidak sepenuhnya bergantung pada perilaku pengguna sebelumnya.
@@ -192,8 +220,6 @@ Painted Veil, The : Drama|Romance
 Raiders of the Lost Ark: The Adaptation : Action|Adventure|Thriller
 ```
 
-
-
 #### Kelebihan _Collaborative Filtering_:
 - _Collaborative Filtering_ memberikan rekomendasi yang personal karena didasarkan pada preferensi dan perilaku pengguna sejenis.
 - Tidak memerlukan informasi eksplisit tentang item, sehingga cocok untuk sistem dengan banyak item atau di mana deskripsi item sulit didapatkan.
@@ -233,34 +259,6 @@ $\ \text{Cosinus Similarity} = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{
 - $\( n \)$ adalah jumlah fitur atau dimensi dalam vektor.
 
 _Cosinus Similarity_ mengukur kesamaan antara dua vektor berdasarkan _cosinus_ dari sudut antara vektor-vektor tersebut. Semakin besar nilai _Cosinus Similarity_, semakin mirip kedua vektor tersebut. Dalam konteks _Content-Based Filtering_, vektor ini mewakili representasi fitur dari item yang dibandingkan.
-
-#### Evaluasi Menggunakan Pendekatan _Content-Based Filtering_
-```sh
-data[data.judul.eq("Bill & Ted's Bogus Journey")]
-```
-Output:
-
-**Tabel 4**. Hasil Pencarian Film "Bill & Ted's Bogus Journey"
-| id   | judul                        | genre                           |
-|------|------------------------------|---------------------------------|
-| 4980 | Bill & Ted's Bogus Journey   | Adventure-Comedy-Fantasy-Scifi  |
-```sh
-movie_recommendations("Bill & Ted's Bogus Journey")
-```
-Output:
-
-**Tabel 5**. Hasil Rekomendasi Film Berdasarkan "Bill & Ted's Bogus Journey"
-| judul                        | genre                                  |
-|------------------------------|----------------------------------------|
-| Time Bandits                 | Adventure-Comedy-Fantasy-Scifi         |
-| Mothra	                     | Adventure-Fantasy-Scifi                |
-| Biggles                      | Adventure-Fantasy-Scifi                |
-| Tin Man	                     | Adventure-Fantasy-Scifi                |
-| Ant-Man and the Wasp         | Action-Adventure-Comedy-Fantasy-Scifi  |
-
-- Film "Bill & Ted's Bogus Journey" memiliki genre Adventure, Comedy, Fantasy, dan Scifi.
-- Model _Content-Based Filtering_ memberikan 5 rekomendasi film dengan genre yang mirip, termasuk Adventure, Comedy, Fantasy, dan Scifi.
-- Dari 5 rekomendasi, semuanya memiliki genre yang sesuai dengan film yang dicari, menunjukkan konsistensi model dalam memberikan rekomendasi berdasarkan preferensi pengguna.
 
 Jadi, _Cosinus Similarity_ membantu dalam mengukur kesamaan fitur antara film yang dicari dan film-film rekomendasi, sementara _Precision_ memberikan gambaran tentang seberapa baik model dapat memberikan rekomendasi yang sesuai dengan preferensi pengguna berdasarkan informasi fitur tersebut. Keduanya bekerja bersama untuk memberikan pemahaman yang komprehensif tentang kualitas rekomendasi yang diberikan oleh model _Content-Based Filtering_.
 
