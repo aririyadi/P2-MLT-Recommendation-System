@@ -170,27 +170,10 @@ _Collaborative filtering_ mengandalkan pola perilaku pengguna sejenis untuk memb
 
 #### Implementasi _collaborative filtering_:
 
-- Data Preparation
-
-Melakukan _encode_ pada feature 'userId' dan 'movieId'. proses _encode_ akan memetakan setiap nilai pada kedua _feature_ tersebut ke dalam bentuk _index_.
-
-- Pembagian Data Train dan Validasi
-
-Pembagian data train dan validasi dilakukan dengan komposisi 80:20. Pembagian ini bertujuan untuk mencapai sejumlah tujuan kritis dalam proses pengembangan model dan membantu memastikan kehandalan serta kinerja yang optimal pada berbagai kondisi penggunaan.
-
-- Training
-
-Proses training dilakukan dengan mengimplementasikan teknik _embedding_ pada model _RecommenderNet_ untuk menghitung skor kecocokan antara film dan pengguna. Dalam proses _compile_, _BinaryCrossentropy_ digunakan sebagai fungsi kerugian untuk tugas prediksi _biner_, sementara _Adam optimizer_ dengan _learning rate_ 0.001 dan _Root Mean Squared Error (RMSE)_ sebagai metrik evaluasi. Pelatihan model berlangsung selama 100 epochs dengan batch size 32, menggunakan data latih untuk melatih model dan data validasi untuk evaluasi. _Callback EarlyStopping_ diterapkan dengan _patience_ 5, sehingga pelatihan akan berhenti jika tidak ada peningkatan yang signifikan dalam metrik validasi selama 5 _epoch_ berturut-turut. Setelah pelatihan, model dievaluasi menggunakan data validasi untuk memastikan generalisasi yang baik.
-
-#### 4. Metrik Evaluasi
-![1](https://github.com/aririyadi/P2-MLT-Recommendation-System/assets/147322531/d2e1a3d6-c4fe-4dd1-af6f-65d58b394f70)
-
-**Gambar 1**. Visualisasi Metrik Evaluasi
-
-Perhatikan gambar diatas, proses training model menunjukkan bahwa model memiliki performa yang baik dan model konvergen pada _epochs_ sekitar 100. Dari proses ini, kita memperoleh nilai error akhir sebesar sekitar 0.0710 dan error pada data validasi sebesar 0.2618. Nilai tersebut dapat digunakan untuk membuat sistem rekomendasi.
-
-#### 5. Mendapatkan Rekomendasi
-Untuk mendapatkan rekomendasi _movie_ atau film, pertama kita ambil sampel _user_ secara acak dan definisikan variabel `movie_not_visited` yang merupakan daftar _movie_ yang belum pernah dikunjungi oleh pengguna. Selanjutnya, untuk memperoleh rekomendasi _movie_ atau film, gunakan fungsi `model.predict()` dari library Keras, kemudian sistem akan memberikan rekomendasi sebagai berikut:
+- **Data Preparation**: Melakukan _encode_ pada feature 'userId' dan 'movieId'. proses _encode_ akan memetakan setiap nilai pada kedua _feature_ tersebut ke dalam bentuk _index_.
+- **Pembagian Data**: Pembagian data train dan validasi dilakukan dengan komposisi 80:20. Pembagian ini bertujuan untuk mencapai sejumlah tujuan kritis dalam proses pengembangan model dan membantu memastikan kehandalan serta kinerja yang optimal pada berbagai kondisi penggunaan.
+- **Training**: Proses training dilakukan dengan mengimplementasikan teknik _embedding_ pada model _RecommenderNet_ untuk menghitung skor kecocokan antara film dan pengguna. Dalam proses _compile_, _BinaryCrossentropy_ digunakan sebagai fungsi kerugian untuk tugas prediksi _biner_, sementara _Adam optimizer_ dengan _learning rate_ 0.001 dan _Root Mean Squared Error (RMSE)_ sebagai metrik evaluasi. Pelatihan model berlangsung selama 100 epochs dengan batch size 32, menggunakan data latih untuk melatih model dan data validasi untuk evaluasi. _Callback EarlyStopping_ diterapkan dengan _patience_ 5, sehingga pelatihan akan berhenti jika tidak ada peningkatan yang signifikan dalam metrik validasi selama 5 _epoch_ berturut-turut. Setelah pelatihan, model dievaluasi menggunakan data validasi untuk memastikan generalisasi yang baik.
+- **Mendapatkan Rekomendasi**: Untuk mendapatkan rekomendasi _movie_ atau film, pertama kita ambil sampel _user_ secara acak dan definisikan variabel `movie_not_visited` yang merupakan daftar _movie_ yang belum pernah dikunjungi oleh pengguna. Selanjutnya, untuk memperoleh rekomendasi _movie_ atau film, gunakan fungsi `model.predict()` dari library Keras, kemudian sistem akan memberikan rekomendasi sebagai berikut:
 ```sh
 Menampilkan Rekomendasi untuk Pengguna (User): 599.0
 ===========================
@@ -215,6 +198,9 @@ Widow of St. Pierre, The : Drama|Romance
 Painted Veil, The : Drama|Romance
 Raiders of the Lost Ark: The Adaptation : Action|Adventure|Thriller
 ```
+
+
+
 #### Kelebihan _Collaborative Filtering_:
 - _Collaborative Filtering_ memberikan rekomendasi yang personal karena didasarkan pada preferensi dan perilaku pengguna sejenis.
 - Tidak memerlukan informasi eksplisit tentang item, sehingga cocok untuk sistem dengan banyak item atau di mana deskripsi item sulit didapatkan.
@@ -300,6 +286,13 @@ Di mana:
 - $\( \hat{y}_i \)$ adalah nilai prediksi model untuk preferensi pengguna terhadap item.
 
 _RMSE_ mengukur deviasi rata-rata antara nilai sebenarnya dan nilai prediksi, memberikan gambaran tentang tingkat akurasi model. Semakin kecil nilai _RMSE_, semakin baik model dapat memprediksi preferensi pengguna terhadap item.
+
+#### Metrik Evaluasi
+![1](https://github.com/aririyadi/P2-MLT-Recommendation-System/assets/147322531/d2e1a3d6-c4fe-4dd1-af6f-65d58b394f70)
+
+**Gambar 1**. Visualisasi Metrik Evaluasi
+
+Perhatikan Gambar 1 diatas, proses training model menunjukkan bahwa model memiliki performa yang baik dan model konvergen pada _epochs_ sekitar 100. Dari proses ini, kita memperoleh nilai error akhir sebesar sekitar 0.0710 dan error pada data validasi sebesar 0.2618. Nilai tersebut dapat digunakan untuk membuat sistem rekomendasi.
 
 Berdasarkan hasil evaluasi, model _Collaborative Filtering_ menunjukkan kinerja yang baik dengan kemampuan untuk memprediksi preferensi pengguna secara akurat. Meskipun terdapat sedikit perbedaan antara hasil pada data latih dan data validasi, namun nilai _RMSE_ yang relatif kecil pada keduanya menandakan bahwa model tersebut dapat umumnya digeneralisasikan dengan baik pada data yang tidak terlihat selama pelatihan. Nilai _Root Mean Squared Error (RMSE)_ yang dicapai pada data latih sebesar 0.0710 dan pada data validasi sebesar 0.2618 menunjukkan bahwa model memiliki tingkat akurasi yang tinggi dalam memprediksi preferensi pengguna terhadap item. Semakin kecil nilai _RMSE_, semakin baik kemampuan model dalam membuat prediksi yang mendekati nilai sebenarnya. Dengan nilai _RMSE_ yang relatif kecil, model _Collaborative Filtering_ dapat dianggap berhasil dalam tugas rekomendasi item berdasarkan preferensi pengguna.
 
