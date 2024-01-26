@@ -11,13 +11,6 @@ Secara keseluruhan sistem rekomendasi menciptakan pengalaman yang lebih personal
 
 Dengan fokus pada tema "Movie Recommendation System," proyek ini bertujuan untuk mengembangkan sistem rekomendasi film menggunakan teknik machine learning. Di tengah era digital saat ini, di mana masyarakat memiliki akses yang melimpah ke berbagai konten audio-visual, termasuk film, seringkali pengguna merasa kesulitan memilih film yang sesuai dengan preferensi pribadi mereka. Oleh karena itu, sistem rekomendasi film menjadi solusi yang sangat diandalkan untuk menyajikan rekomendasi yang tidak hanya personal namun juga relevan. Proyek ini secara khusus berfokus pada memanfaatkan data sejarah penonton untuk meningkatkan keakuratan rekomendasi, membantu pengguna menemukan film yang sesuai dengan selera mereka.
 
-### References and Related Research
-
-- [Introduction to Recommender System](https://hackernoon.com/introduction-to-recommender-system-part-1-collaborative-filtering-singular-value-decomposition-44c9659c5e75)
-- [Getting Started with a Movie Recommendation System](https://www.kaggle.com/code/ibtesama/getting-started-with-a-movie-recommendation-system)
-- [Movie Recommendation system(For Deployment)](https://www.kaggle.com/code/terminate9298/movie-recommendation-system-for-deployment)
-- [Sistem Rekomendasi Film Menggunakan Content Based Filtering](https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/download/9163/4159/)
-
 ## Business Understanding
 Dalam konteks platform streaming, implementasi sistem rekomendasi memiliki peran strategis dalam meningkatkan retensi pengguna dan meningkatkan pendapatan. Dengan menyediakan rekomendasi yang lebih akurat dan personal, platform dapat meningkatkan kepuasan pelanggan, membuat pengalaman pengguna lebih menyenangkan, dan secara langsung berkontribusi pada pertumbuhan bisnis.
 
@@ -300,13 +293,8 @@ Berdasarkan hasil evaluasi, model _Collaborative Filtering_ menunjukkan kinerja 
 Proses pengembangan sistem rekomendasi film menggunakan teknik machine learning dengan fokus pada _Content-Based Filtering_ dan _Collaborative Filtering_. Proyek ini mengintegrasikan algoritma _Content-Based Filtering_ yang menganalisis preferensi pengguna berdasarkan sejarah penontonan, penilaian, atau ulasan sebelumnya, serta _Collaborative Filtering_ yang memanfaatkan pola perilaku pengguna sejenis. Data yang digunakan berasal dari dataset Kaggle yang terdiri dari informasi film dan penilaian pengguna. _Content-Based Filtering_ menggunakan _TF-IDF Vectorizer_ dan _Cosine Similarity_ untuk memberikan rekomendasi berdasarkan kesamaan fitur genre. Sementara itu, _Collaborative Filtering_ menerapkan _embedding_ dengan model _RecommenderNet_ dan mengukur performanya menggunakan _Root Mean Squared Error (RMSE)_. Evaluasi kedua pendekatan menunjukkan bahwa keduanya memberikan rekomendasi yang sesuai dengan preferensi pengguna dengan akurasi yang tinggi, namun dengan kelebihan dan kekurangan masing-masing. _Content-Based Filtering_ menyediakan rekomendasi yang lebih personal dan dapat menangani _cold start_, tetapi terbatas pada jenis item yang sudah diketahui pengguna. Sementara _Collaborative Filtering_ memberikan rekomendasi yang beragam dan dapat menangani item baru, tetapi rentan terhadap _sparsitas_ data dan kesulitan dalam menangani perubahan drastis dalam preferensi pengguna. Keseluruhan, proyek ini memberikan pemahaman mendalam tentang implementasi kedua pendekatan dalam konteks sistem rekomendasi film.
 
 ## Reference
-[1]. Roy, D., Dutta, M. _A systematic review and research perspective on recommender systems_. J Big Data 9, 59 (2022). [https://doi.org/10.1186/s40537-022-00592-5]
 
-[1]. Wang, F., Zhang, H., & Xie, W. (2022). _Recent Advances in Recommender Systems: A Comprehensive Review_. Journal of Information Science, 48(3), 291-316. DOI: [Link DOI]
-
-[2]. Chen, L., & Li, T. (2019). _Enhancing Collaborative Filtering Recommender Systems: A Comprehensive Survey_. ACM Computing Surveys, 52(1), 1-38. DOI: [Link DOI]
-
-[3]. Gupta, R., & Kumaraguru, P. (2020). _Exploring Content-Based Recommender Systems: A Survey_. Expert Systems with Applications, 149, 113316. DOI: [Link DOI]
-
-
-
+- [Introduction to Recommender System](https://hackernoon.com/introduction-to-recommender-system-part-1-collaborative-filtering-singular-value-decomposition-44c9659c5e75)
+- [Getting Started with a Movie Recommendation System](https://www.kaggle.com/code/ibtesama/getting-started-with-a-movie-recommendation-system)
+- [Movie Recommendation system(For Deployment)](https://www.kaggle.com/code/terminate9298/movie-recommendation-system-for-deployment)
+- [Sistem Rekomendasi Film Menggunakan Content Based Filtering](https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/download/9163/4159/)
