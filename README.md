@@ -168,14 +168,15 @@ Berikut proses atau tahapan dalam implementasi _content-based filtering_ menggun
 ### _Collaborative Filtering_
 _Collaborative filtering_ mengandalkan pola perilaku pengguna sejenis untuk memberikan rekomendasi film. Dengan pendekatan _embedding_ dan model _RecommenderNet_, sistem ini menghitung skor kecocokan antara film dan pengguna. pada proses training melibatkan pembagian data train dan validasi, serta penggunaan _BinaryCrossentropy_ sebagai fungsi kerugian. Penggunaan _EarlyStopping_ memastikan pelatihan model berhenti jika tidak ada peningkatan signifikan dalam evaluasi validasi. _Collaborative filtering_ memberikan rekomendasi yang beragam, meskipun bisa rentan terhadap _sparsitas_ data dan sulit menangani perubahan drastis dalam preferensi pengguna.
 
-Berikut proses atau tahapan dalam implementasi _collaborative filtering_:
+#### Implementasi _collaborative filtering_:
 
-#### 1. Data Preparation
+- Data Preparation
 Melakukan _encode_ pada feature 'userId' dan 'movieId'. proses _encode_ akan memetakan setiap nilai pada kedua _feature_ tersebut ke dalam bentuk _index_.
-#### 2. Pembagian Data Train dan Validasi
+- Pembagian Data Train dan Validasi
 Pembagian data train dan validasi dilakukan dengan komposisi 80:20. Pembagian ini bertujuan untuk mencapai sejumlah tujuan kritis dalam proses pengembangan model dan membantu memastikan kehandalan serta kinerja yang optimal pada berbagai kondisi penggunaan.
-#### 3. Training
+- Training
 Proses training dilakukan dengan mengimplementasikan teknik _embedding_ pada model _RecommenderNet_ untuk menghitung skor kecocokan antara film dan pengguna. Dalam proses _compile_, _BinaryCrossentropy_ digunakan sebagai fungsi kerugian untuk tugas prediksi _biner_, sementara _Adam optimizer_ dengan _learning rate_ 0.001 dan _Root Mean Squared Error (RMSE)_ sebagai metrik evaluasi. Pelatihan model berlangsung selama 100 epochs dengan batch size 32, menggunakan data latih untuk melatih model dan data validasi untuk evaluasi. _Callback EarlyStopping_ diterapkan dengan _patience_ 5, sehingga pelatihan akan berhenti jika tidak ada peningkatan yang signifikan dalam metrik validasi selama 5 _epoch_ berturut-turut. Setelah pelatihan, model dievaluasi menggunakan data validasi untuk memastikan generalisasi yang baik.
+
 #### 4. Metrik Evaluasi
 ![1](https://github.com/aririyadi/P2-MLT-Recommendation-System/assets/147322531/d2e1a3d6-c4fe-4dd1-af6f-65d58b394f70)
 
