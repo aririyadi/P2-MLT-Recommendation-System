@@ -2,6 +2,13 @@
 
 ## Project Overview
 
+Sistem rekomendasi telah menjadi komponen krusial dalam berbagai industri, menyediakan layanan yang disesuaikan dengan preferensi pengguna. Berikut tren penggunaan sistem rekomendasi di berbagai industri dan dampaknya terhadap pengalaman pengguna serta strategi bisnis:
+
+Pada platform e-commerce seperti Amazon, Alibaba, dan eBay sistem rekomendasi dapat meningkatkan konversi penjualan, meningkatkan retensi pelanggan, dan memperluas keranjang belanja dengan merekomendasikan produk tambahan.
+Pada layanan streaming seperti Netflix, Spotify, dan YouTube sistem rekomendasi dapat meningkatkan retensi pengguna, mengurangi churn, dan meningkatkan waktu penontonan dengan menyajikan konten yang sesuai.
+Pada platform perjalanan seperti Booking.com, Airbnb, dan TripAdvisor sistem rekomendasi dapat meningkatkan kepuasan pelanggan, memberikan pengalaman perjalanan yang disesuaikan, dan mendorong reservasi berulang.
+Secara keseluruhan sistem rekomendasi menciptakan pengalaman yang lebih personal dan relevan bagi pengguna, meningkatkan kepuasan, retensi dan optimisasi strategi bisnis dengan kata lain sistem rekomendasi telah menjadi aset berharga dalam menyediakan layanan yang disesuaikan dengan preferensi pengguna, membantu bisnis dan meningkatkan efisiensi operasional serta mencapai tujuan bisnis mereka.
+
 Pesatnya pertumbuhan pengumpulan data telah membawa era informasi baru. Data digunakan untuk menciptakan sistem yang lebih efisien dan di sinilah Sistem Rekomendasi berperan. Sistem Rekomendasi adalah jenis sistem penyaringan informasi yang meningkatkan kualitas hasil pencarian dan menyediakan item yang lebih relevan dengan item pencarian atau berhubungan dengan riwayat pencarian pengguna.
 
 Proyek ini bertujuan untuk mengembangkan sistem rekomendasi film menggunakan teknik machine learning. Saat ini, di era digital, masyarakat memiliki akses yang melimpah ke berbagai konten audio-visual, termasuk film. Namun, jumlah film yang tersedia dapat membuat pengguna bingung untuk memilih film yang sesuai dengan preferensi mereka. Sistem rekomendasi film adalah solusi yang efektif untuk memberikan rekomendasi yang personal dan relevan kepada pengguna berdasarkan sejarah penontonannya.
