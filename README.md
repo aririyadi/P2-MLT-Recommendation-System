@@ -116,28 +116,28 @@ Dataset ini dapat diunduh melalui situs [Kaggle : Movies & Ratings for Recommend
 ## Data Preparation
 
 ### Memisahkan Judul Film dari Tahun Rilis:
-Memisahkan judul film dari tahun rilis dalam data preparation menggunakan fungsi `split()`, tidak hanya menyederhanakan dataset, memudahkan analisis, dan memfokuskan pada karakteristik inti film, tetapi juga meningkatkan keterbacaan kode, mengurangi kompleksitas yang tidak perlu, dan memberikan fleksibilitas pada model machine learning untuk menangani fitur-fitur secara terpisah sesuai kebutuhan analisis.
+- Memisahkan judul film dari tahun rilis dalam data preparation menggunakan fungsi `split()`, tidak hanya menyederhanakan dataset, memudahkan analisis, dan memfokuskan pada karakteristik inti film, tetapi juga meningkatkan keterbacaan kode, mengurangi kompleksitas yang tidak perlu, dan memberikan fleksibilitas pada model machine learning untuk menangani fitur-fitur secara terpisah sesuai kebutuhan analisis.
 
 ### Membulatkan Nilai pada Kolom 'rating':
-Membulatkan nilai pada kolom 'rating' dengan menggunakan fungsi `np.ceil` bertujuan untuk menyesuaikan skala penilaian dengan nilai bulat, memberikan interpretasi yang lebih sederhana, dan mendukung konsistensi dalam analisis.
+- Membulatkan nilai pada kolom 'rating' dengan menggunakan fungsi `np.ceil` bertujuan untuk menyesuaikan skala penilaian dengan nilai bulat, memberikan interpretasi yang lebih sederhana, dan mendukung konsistensi dalam analisis.
 
 ### Mengubah Format Waktu pada Kolom 'timestamp':
-Mengubah format waktu pada kolom 'timestamp' dengan menggunakan fungsi `pd.to_datetime` bertujuan untuk memudahkan analisis berbasis waktu, memungkinkan pemahaman yang lebih baik tentang pola perilaku pengguna dari waktu ke waktu, dan mendukung pengembangan model yang mempertimbangkan aspek temporal dalam rekomendasi film.
+- Mengubah format waktu pada kolom 'timestamp' dengan menggunakan fungsi `pd.to_datetime` bertujuan untuk memudahkan analisis berbasis waktu, memungkinkan pemahaman yang lebih baik tentang pola perilaku pengguna dari waktu ke waktu, dan mendukung pengembangan model yang mempertimbangkan aspek temporal dalam rekomendasi film.
 
 ### Menggabungkan Data _Movies_ dan _Ratings_ berdasarkan 'movieId':
-Menggabungkan data Movies dan Ratings berdasarkan 'movieId' menggunakan metode _merge_ memiliki tujuan untuk menyatukan informasi mengenai film dan rating pengguna. Dengan langkah ini, dataset menjadi lebih lengkap, memungkinkan analisis yang lebih holistik tentang preferensi pengguna terhadap berbagai film.
+- Menggabungkan data _Movies_ dan _Ratings_ berdasarkan 'movieId' menggunakan metode _merge_ bertujuan untuk menyatukan informasi mengenai film dan rating pengguna. Dengan langkah ini, dataset menjadi lebih lengkap, memungkinkan analisis yang lebih holistik tentang preferensi pengguna terhadap berbagai film.
 
 ### Mendeteksi dan Menghapus _Missing Values_:
-Mendeteksi dan menghapus _missing values_ dengan menggunakan metode `isnull()` dan `dropna()` bertujuan untuk membersihkan dataset dari nilai yang hilang. Tindakan ini dapat meningkatkan kualitas data yang digunakan dalam model _machine learning_, menghindari potensi bias atau ketidakakuratan akibat kekosongan data.
+- Mendeteksi dan menghapus _missing values_ dengan menggunakan metode `isnull()` dan `dropna()` bertujuan untuk membersihkan dataset dari nilai yang hilang. Tindakan ini dapat meningkatkan kualitas data yang digunakan dalam model _machine learning_, menghindari potensi bias atau ketidakakuratan akibat kekosongan data.
 
 ### Menghapus Duplikat Berdasarkan Kolom 'movieId' dan 'title':
-Menghapus duplikat berdasarkan 'movieId' dan 'title' menggunakan `drop_duplicates` bertujuan untuk memastikan keberagaman dan integritas data, sehingga setiap film hanya muncul sekali dalam dataset. Langkah ini mendukung analisis yang lebih akurat dan mencegah distorsi hasil akibat duplikasi informasi.
+- Menghapus duplikat berdasarkan 'movieId' dan 'title' menggunakan `drop_duplicates` bertujuan untuk memastikan keberagaman dan integritas data, sehingga setiap film hanya muncul sekali dalam dataset. Langkah ini mendukung analisis yang lebih akurat dan mencegah distorsi hasil akibat duplikasi informasi.
 
 ### Mengonversi Data _Series_ menjadi _List_:
-Mengonversi data series 'movieId', 'title', dan 'genres' menjadi list bertujuan untuk mempersiapkan data dalam format yang lebih fleksibel dan mendukung proses analisis selanjutnya. Langkah ini memungkinkan penggunaan data dalam berbagai struktur, seperti pembuatan dictionary atau pemrosesan lebih lanjut dalam bentuk list.
+- Mengonversi data series 'movieId', 'title', dan 'genres' menjadi list bertujuan untuk mempersiapkan data dalam format yang lebih fleksibel dan mendukung proses analisis selanjutnya. Langkah ini memungkinkan penggunaan data dalam berbagai struktur, seperti pembuatan dictionary atau pemrosesan lebih lanjut dalam bentuk list.
 
 ### Membuat _Dictionary_ dari Data Series:
-Membuat dictionary dari data 'movieId', 'title', dan 'genres' bertujuan untuk memudahkan akses dan penggunaan data dengan memberikan kunci yang jelas untuk setiap informasi film. Dengan menggunakan struktur dictionary, pengguna dapat dengan mudah merujuk pada data spesifik berdasarkan 'movieId', 'title', atau 'genres', sehingga mempermudah proses analisis dan manipulasi data lebih lanjut.
+- Membuat dictionary dari data 'movieId', 'title', dan 'genres' bertujuan untuk memudahkan akses dan penggunaan data dengan memberikan kunci yang jelas untuk setiap informasi film. Dengan menggunakan struktur dictionary, pengguna dapat dengan mudah merujuk pada data spesifik berdasarkan 'movieId', 'title', atau 'genres', sehingga mempermudah proses analisis dan manipulasi data lebih lanjut.
 
 ## Modeling
 Pada proyek ini, implementasi 2 pendekatan dengan menggunakan teknik _content-based filtering_ dan _collaborative filtering_.
