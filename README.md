@@ -1,5 +1,5 @@
-# Laporan Proyek Machine Learning - _Ari Riyadi_
-
+# Movie Recommendation System
+**_Oleh_ : Ari Riyadi, S. Kom**
 ## Project Overview
 Sistem rekomendasi telah menjadi komponen krusial dalam berbagai industri, menyediakan layanan yang disesuaikan dengan preferensi pengguna. Berikut tren penggunaan sistem rekomendasi di berbagai industri dan dampaknya terhadap pengalaman pengguna serta strategi bisnis:
 
