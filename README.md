@@ -1,5 +1,5 @@
 # Movie Recommendation System - _Content Based Filtering & Collaborative Filtering_
-**_Oleh_ : Ari Riyadi**
+**_Oleh_ : Ari Riyadi, S. Kom**
 
 [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aririyadi/)
 [![Kaggle Badge](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/)
