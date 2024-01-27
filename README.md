@@ -1,4 +1,4 @@
-# Movies & Ratings for Recommendation System
+# Movie Recommendation System - _Content-Based Filtering_ & _Collaborative Filtering_
 **_Oleh_ : Ari Riyadi, S. Kom**
 ## Project Overview
 Sistem rekomendasi telah menjadi komponen krusial dalam berbagai industri, menyediakan layanan yang disesuaikan dengan preferensi pengguna. Berikut tren penggunaan sistem rekomendasi di berbagai industri dan dampaknya terhadap pengalaman pengguna serta strategi bisnis:
