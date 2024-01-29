@@ -1,4 +1,4 @@
-# Movie Recommendation System - _Content Based Filtering & Collaborative Filtering_
+# [Movie Recommendation System](https://sistem-rekomendasi-film.streamlit.app/) - _Content Based Filtering & Collaborative Filtering_
 **_By_ : _Ari Riyadi, S. Kom_**
 
 [![Streamlit Badge](https://img.shields.io/badge/MyApps-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://sistem-rekomendasi-film.streamlit.app/)
